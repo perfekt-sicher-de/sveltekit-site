@@ -1,43 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
-	import Loader from '../components/Loader.svelte';
-	onMount(async () => {});
+	import Navbar from '../components/Navbar.svelte';
 </script>
 
 <section class="hero is-fullheight">
 	<div class="hero-head">
-		<nav class="navbar">
-			<div class="container">
-				<div class="navbar-brand">
-					<span class="navbar-burger burger" data-target="navbarMenu">
-						<span />
-						<span />
-						<span />
-					</span>
-				</div>
-				<div id="navbarMenu" class="navbar-menu">
-					<div class="navbar-end">
-						<span class="navbar-item">
-							<a class="button is-info is-outlined" href="#">
-								<span class="icon">
-									<i class="fa fa-home" />
-								</span>
-								<span>Home</span>
-							</a>
-						</span>
-						<span class="navbar-item">
-							<a class="button is-link is-outlined" href="#">
-								<span class="icon">
-									<i class="fa fa-superpowers" />
-								</span>
-								<span>About Us</span>
-							</a>
-						</span>
-						
-					</div>
-				</div>
-			</div>
-		</nav>
+		<Navbar />
 	</div>
 
 	<div class="hero-body">
@@ -51,7 +18,7 @@
 							<input class="input" type="url" placeholder="www.your-site.de" />
 						</p>
 						<p class="control">
-							<a class="button is-info"> Scan starten </a>
+							<button class="button is-info is-outlined"> Scan starten </button>
 						</p>
 					</div>
 				</div>
@@ -61,4 +28,29 @@
 </section>
 
 <style>
+	.control .button {
+		border-color: var(--brandColor) !important;
+		color: var(--brandColor) !important;
+	}
+	.control .button:hover {
+		background-color: var(--brandColor) !important;
+		color: var(--background) !important;
+	}
+	input{
+	background-color: var(--backgroundLight) !important;
+
+	}
+	input:focus{
+		border-color: var(--brandColor) !important;
+	}
+	input::placeholder {
+		color: var(--textLight);
+	}
+	.title{
+		color:var(--textDark)
+	}
+	.subtitle{
+		color:var(--textLight)
+
+	}
 </style>
