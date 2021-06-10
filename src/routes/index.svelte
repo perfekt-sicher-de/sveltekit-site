@@ -1,5 +1,10 @@
 <script>
 	import Navbar from '../components/Navbar.svelte';
+	import { GetWebsiteSecurityScore } from '../requests/SecurityScanRequests';
+	async function scanSite() {
+		let url = document.getElementById('url').value;
+		console.log(await GetWebsiteSecurityScore(url));
+	}
 </script>
 
 <section class="hero is-fullheight">
@@ -15,10 +20,10 @@
 				<div class="box">
 					<div class="field is-grouped">
 						<p class="control is-expanded">
-							<input class="input" type="url" placeholder="www.your-site.de" />
+							<input class="input" id="url" type="url" placeholder="www.your-site.de" />
 						</p>
 						<p class="control">
-							<button class="button is-info is-outlined"> Scan starten </button>
+							<button class="button is-info is-outlined" on:click={scanSite}> Scan starten </button>
 						</p>
 					</div>
 				</div>
@@ -36,21 +41,19 @@
 		background-color: var(--brandColor) !important;
 		color: var(--background) !important;
 	}
-	input{
-	background-color: var(--backgroundLight) !important;
-
+	input {
+		background-color: var(--backgroundLight) !important;
 	}
-	input:focus{
+	input:focus {
 		border-color: var(--brandColor) !important;
 	}
 	input::placeholder {
 		color: var(--textLight);
 	}
-	.title{
-		color:var(--textDark)
+	.title {
+		color: var(--textDark);
 	}
-	.subtitle{
-		color:var(--textLight)
-
+	.subtitle {
+		color: var(--textLight);
 	}
 </style>

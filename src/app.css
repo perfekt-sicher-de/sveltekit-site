@@ -1,5 +1,6 @@
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css';
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
 :root {
 	--brandColor: hsl(187, 95%, 40%);
 	--textDark: hsl(0, 0%, 0%);
@@ -7,29 +8,37 @@
 	--background: hsl(0, 0%, 100%);
 	--backgroundLight: hsl(0, 0%, 90%);
 }
+
 html,
 body,
 main {
 	background-color: var(--backgroundLight) !important;
 }
+
 .box {
 	background-color: var(--background) !important;
 }
+
 .register {
 	background-color: var(--background) !important;
 }
+
 .message.is-primary .message-body {
 	border-color: var(--textLight) !important;
 	color: var(--textLight) !important;
 	background-color: var(--backgroundLight) !important;
 }
+
 #const {
 	color: var(--brandColor) !important;
 }
 
-.button.is-link, .button.is-link:hover, .button.is-link:active {
-    background-color: var(--brandColor);
+.button.is-link,
+.button.is-link:hover,
+.button.is-link:active {
+	background-color: var(--brandColor);
 }
+
 .objects {
 	display: inline-block;
 	background-color: var(--brandColor);
@@ -44,6 +53,7 @@ main {
 	box-shadow: 2px 2px 2px #999;
 	cursor: move;
 }
+
 .dropMessage {
 	color: var(--textDark);
 }
