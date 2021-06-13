@@ -28,13 +28,13 @@
 	async function createGaugeWidget(score) {
 		await tick();
 		var opts = {
-			angle: 0, // The span of the gauge arc
-			lineWidth: 0.2, // The line thickness
-			radiusScale: 1, // Relative radius
+			angle: 0,
+			lineWidth: 0.2,
+			radiusScale: 1,
 			pointer: {
-				length: 0.6, // // Relative to gauge radius
-				strokeWidth: 0.035, // The thickness
-				color: '#000000' // Fill color
+				length: 0.6,
+				strokeWidth: 0.035,
+				color: '#000000'
 			},
 			limitMax: false, // If false, max value increases automatically if value > maxValue
 			limitMin: false, // If true, the min value of the gauge will be fixed
@@ -63,7 +63,7 @@
 		gauge.set(score);
 	}
 	async function handleNext() {
-		await goto('/');
+		await goto('/profile');
 	}
 	async function handleBack() {
 		await goto('/');
