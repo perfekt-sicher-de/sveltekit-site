@@ -22,7 +22,7 @@
 		});
 	});
 	async function gotoNext() {
-		await goto('/');
+		await goto('/contact');
 	}
 </script>
 
@@ -32,7 +32,7 @@
 </h2>
 <div class="box">
 	<div class="range-slider">
-		<input class="range-slider__range" id="rangeInput" type="range" value="100" min="0" max="500" />
+		<input class="range-slider__range" id="rangeInput" step="500" type="range" value="15000" min="10000" max="50000" />
 		<span class="range-slider__value">{rangeValue}</span>
 	</div>
 </div>

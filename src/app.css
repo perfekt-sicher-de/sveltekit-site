@@ -1,5 +1,5 @@
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css';
-@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import 'https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css';
 :root {
 	--brandColor: hsl(187, 95%, 40%);
 	--textDark: hsl(0, 0%, 0%);

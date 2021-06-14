@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 	let theme = 'light';
 	onMount(async () => {
 		let thValue = localStorage.getItem('theme');
@@ -34,6 +35,9 @@
 		localStorage.setItem('theme', theme);
 		implementTheme();
 	}
+	async function gotoHome() {
+		await goto('/');
+	}
 </script>
 
 <nav class="navbar">
@@ -48,21 +52,14 @@
 		<div id="navbarMenu" class="navbar-menu">
 			<div class="navbar-end">
 				<span class="navbar-item">
-					<button class="button is-outlined">
+					<button class="button is-outlined" on:click={gotoHome}>
 						<span class="icon">
 							<i class="fa fa-home" />
 						</span>
 						<span>Home</span>
 					</button>
 				</span>
-				<span class="navbar-item">
-					<button class="button is-outlined">
-						<span class="icon">
-							<i class="fa fa-superpowers" />
-						</span>
-						<span>About Us</span>
-					</button>
-				</span>
+
 				<span class="navbar-item">
 					<button class="button is-outlined" on:click={changeTheme}>
 						<span class="icon">

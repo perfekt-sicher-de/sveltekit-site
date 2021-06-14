@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "next",
+    "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
