@@ -13,7 +13,7 @@
 <script>
 	import { onMount, tick } from 'svelte';
 	import { goto } from '$app/navigation';
-	let rangeValue = 0;
+	let rangeValue = 15000;
 	onMount(() => {
 		let rangSlider = document.getElementById('rangeInput');
 		rangeValue = rangSlider.value;
@@ -32,7 +32,7 @@
 </h2>
 <div class="box">
 	<div class="range-slider">
-		<input class="range-slider__range" id="rangeInput" step="500" type="range" value="15000" min="10000" max="50000" />
+		<input class="range-slider__range" id="rangeInput" step="500" type="range" min="10000" max="50000" />
 		<span class="range-slider__value">{rangeValue}</span>
 	</div>
 </div>
