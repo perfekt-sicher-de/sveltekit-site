@@ -16,7 +16,6 @@
 	let rangeValue = 15000;
 	onMount(() => {
 		let rangSlider = document.getElementById('rangeInput');
-		rangeValue = rangSlider.value;
 		rangSlider.addEventListener('input', (ev) => {
 			rangeValue = ev.target.value;
 		});
@@ -32,7 +31,15 @@
 </h2>
 <div class="box">
 	<div class="range-slider">
-		<input class="range-slider__range" id="rangeInput" step="500" type="range" min="10000" max="50000" />
+		<input
+			class="range-slider__range"
+			id="rangeInput"
+			step="500"
+			type="range"
+			min="10000"
+			max="50000"
+			value="15000"
+		/>
 		<span class="range-slider__value">{rangeValue}</span>
 	</div>
 </div>

@@ -73,7 +73,26 @@
 {#if isLoading}
 	<Loader />
 {:else}
+	<h1 class="title m-4">Ergebnis für Kurztest:</h1>
+	<h2 class="subtitle m-4">{url}</h2>
 	<canvas id="scanMeter" class="m-4" />
+	<div class="field has-addons">
+		<p class="control">
+			<button class="button is-small" style="background-color:#F03E3E;color:white;">
+				<span>Bad</span>
+			</button>
+		</p>
+		<p class="control">
+			<button class="button is-small" style="background-color:#FFDD00;">
+				<span>Normal</span>
+			</button>
+		</p>
+		<p class="control">
+			<button class="button is-small" style="background-color:#30B32D;color:white;">
+				<span>Good</span>
+			</button>
+		</p>
+	</div>
 	<br />
 	<button class="button m-4 is-success is-outlined is-large" on:click={handleNext}>
 		<span> Absichern und weiter Testen lassen durch Profies</span>
@@ -88,3 +107,21 @@
 		</span>
 	</button>
 {/if}
+
+<style>
+	.has-addons {
+		justify-content: center !important;
+	}
+	.control .button {
+		border: none;
+	}
+	.control .button:hover {
+		border: none;
+	}
+	h2{
+		color: var(--brandColor);
+	}
+	.title {
+		color: var(--textDark);
+	}
+</style>
