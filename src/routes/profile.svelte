@@ -11,8 +11,9 @@
 </script>
 
 <script>
-	import { onMount, tick } from 'svelte';
+	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import stringResources from '../stringResources';
 	let rangeValue = 15000;
 	onMount(() => {
 		let rangSlider = document.getElementById('rangeInput');
@@ -25,6 +26,9 @@
 	}
 </script>
 
+<svelte:head>
+	<title>{stringResources.profilePage.titleTag} - {stringResources.appName}</title>
+</svelte:head>
 <h1 class="title m-4">Absichern und weiter Testen lassen durch Profies</h1>
 <h2 class="subtitle m-4">
 	Jährliches Sicherheits Budget für diese Website (empfohlen sind 10% des gesamt Budgets)
@@ -49,7 +53,7 @@
 	Konfigurations Leistungen
 </h3>
 <br />
-<button class="button m-4 is-success is-outlined is-large" on:click={gotoNext}>
+<button class="button mt-4 is-success is-outlined is-small" on:click={gotoNext}>
 	<span>Jetzt unverbindliches Angebot fordern</span>
 	<span class="icon is-medium">
 		<i class="fas fa-check" />

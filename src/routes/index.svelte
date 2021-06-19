@@ -13,7 +13,8 @@
 </svelte:head>
 <h1 class="title m-4">{stringResources.appName}</h1>
 <h2 class="subtitle m-4">{stringResources.indexPage.homeTagLine}</h2>
-<div class="box">
+<div class="columns m-4">
+<div class=" column is-half is-offset-3 box p-4">
 	<div class="field is-grouped">
 		<p class="control is-expanded">
 			<input
@@ -30,7 +31,7 @@
 		</p>
 	</div>
 </div>
-
+</div>
 <style>
 	.control .button {
 		border-color: var(--brandColor) !important;

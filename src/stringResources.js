@@ -8,7 +8,15 @@ const stringResources = {
     },
     resultPage:{
         titleTag: "Scan Result",
-        resultTitle:"Ergebnis für Kurztest:"
+        resultTitle:"Ergebnis für Kurztest:",
+        badTagText:"Bad",
+        normalTagText:"Normal",
+        goodTagText:"Good",
+        profileBtnText:"Absichern und weiter Testen lassen durch Profies",
+        backBtnText:"Kostenlos selber weiter Testen"
+    },
+    profilePage:{
+        titleTag: "Choose Security Profile",
     }
 
 };

@@ -80,32 +80,32 @@
 	<h1 class="title m-4">{stringResources.resultPage.resultTitle}</h1>
 	<h2 class="subtitle m-4">{url}</h2>
 	<canvas id="scanMeter" class="m-4" />
-	<div class="field has-addons">
+	<div class="field has-addons columns is-8">
 		<p class="control">
 			<button class="button is-small" style="background-color:#F03E3E;color:white;">
-				<span>Bad</span>
+				<span>{stringResources.resultPage.badTagText}</span>
 			</button>
 		</p>
 		<p class="control">
 			<button class="button is-small" style="background-color:#FFDD00;">
-				<span>Normal</span>
+				<span>{stringResources.resultPage.normalTagText}</span>
 			</button>
 		</p>
 		<p class="control">
 			<button class="button is-small" style="background-color:#30B32D;color:white;">
-				<span>Good</span>
+				<span>{stringResources.resultPage.goodTagText}</span>
 			</button>
 		</p>
 	</div>
 	<br />
-	<button class="button m-4 is-success is-outlined is-large" on:click={handleNext}>
-		<span> Absichern und weiter Testen lassen durch Profies</span>
+	<button class="button m-4 is-success is-outlined is-small" on:click={handleNext}>
+		<span> {stringResources.resultPage.profileBtnText}</span>
 		<span class="icon is-medium">
 			<i class="fas fa-check" />
 		</span>
 	</button>
-	<button class="button m-4 is-danger is-outlined is-large" on:click={handleBack}>
-		<span> Kostenlos selber weiter Testen</span>
+	<button class="button m-4 is-danger is-outlined is-small" on:click={handleBack}>
+		<span> {stringResources.resultPage.backBtnText}</span>
 		<span class="icon is-medium">
 			<i class="fas fa-times" />
 		</span>
