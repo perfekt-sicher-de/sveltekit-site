@@ -14,6 +14,7 @@
 	export let url;
 	let isLoading = true;
 	import { onMount, tick } from 'svelte';
+	import stringResources from '../stringResources';
 	import { goto } from '$app/navigation';
 	import Loader from '../components/Loader.svelte';
 	import { GetWebsiteSecurityScore } from '../requests/SecurityScanRequests';
@@ -70,10 +71,13 @@
 	}
 </script>
 
+<svelte:head>
+	<title>{stringResources.resultPage.titleTag} - {url} - {stringResources.appName}</title>
+</svelte:head>
 {#if isLoading}
 	<Loader />
 {:else}
-	<h1 class="title m-4">Ergebnis für Kurztest:</h1>
+	<h1 class="title m-4">{stringResources.resultPage.resultTitle}</h1>
 	<h2 class="subtitle m-4">{url}</h2>
 	<canvas id="scanMeter" class="m-4" />
 	<div class="field has-addons">
@@ -118,7 +122,7 @@
 	.control .button:hover {
 		border: none;
 	}
-	h2{
+	h2 {
 		color: var(--brandColor);
 	}
 	.title {

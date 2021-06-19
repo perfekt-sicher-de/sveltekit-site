@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import stringResources from '../stringResources';
 	async function scanSite() {
 		let url = document.getElementById('url').value;
 		url = 'www.check24.de';
@@ -7,15 +8,25 @@
 	}
 </script>
 
-<h1 class="title m-4">My Security Check</h1>
-<h2 class="subtitle m-4">Hier kann ich meine Domains kostenlos und gefahrlos überprüfen</h2>
+<svelte:head>
+	<title>{stringResources.indexPage.titleTag} - {stringResources.appName}</title>
+</svelte:head>
+<h1 class="title m-4">{stringResources.appName}</h1>
+<h2 class="subtitle m-4">{stringResources.indexPage.homeTagLine}</h2>
 <div class="box">
 	<div class="field is-grouped">
 		<p class="control is-expanded">
-			<input class="input" id="url" type="url" placeholder="www.your-site.de" />
+			<input
+				class="input"
+				id="url"
+				type="url"
+				placeholder={stringResources.indexPage.scanInputPlaceHolder}
+			/>
 		</p>
 		<p class="control">
-			<button class="button is-info is-outlined" on:click={scanSite}> Scan starten </button>
+			<button class="button is-info is-outlined" on:click={scanSite}>
+				{stringResources.indexPage.scanStartBtnText}
+			</button>
 		</p>
 	</div>
 </div>
