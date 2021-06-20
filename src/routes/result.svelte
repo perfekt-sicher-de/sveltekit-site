@@ -67,7 +67,7 @@
 		await goto('/profile');
 	}
 	async function handleBack() {
-		await goto('/');
+		await goto('/analysis');
 	}
 </script>
 

@@ -47,10 +47,27 @@
 						{stringResources.contactPage.checkBoxText}
 					</label>
 				</div>
-				<button class="button is-block is-info is-fullwidth">
+				<button class="button is-block is-fullwidth">
 					{stringResources.contactPage.btnText}
 				</button>
 			</form>
 		</div>
 	</div>
 </div>
+
+<style>
+	.button {
+		border-color: var(--brandColor) !important;
+		color: var(--brandColor) !important;
+	}
+	.button:hover {
+		background-color: var(--brandColor) !important;
+		color: var(--background) !important;
+	}
+	input:focus {
+		border-color: var(--brandColor) !important;
+	}
+	.title {
+		color: var(--textDark);
+	}
+</style>

@@ -17,7 +17,7 @@
 	<div class=" column is-half is-offset-3 box p-4">
 		<div class="columns p-2">
 			<input
-				class="input m-2"
+				class="input mt-2 mb-2"
 				id="url"
 				type="url"
 				placeholder={stringResources.indexPage.scanInputPlaceHolder}

@@ -32,7 +32,13 @@ const stringResources = {
         mainTitle: "Angebot anfordern",
         checkBoxText: "Ich teste auch für Klienten oder Tochterunternehmen",
         btnText: "Anfordern"
-
+    },
+    analysisPage:{
+        titleTag:"Pen-Test Analysis",
+        mainTitleText:"Kann ich einen detaillierten Prüfbericht eines Pen-Tests automatisiert erstellen lassen?",
+        mainSubtitleText:"Ja, die folgenden Anbieter bieten einen Probezugang an mit dem du Pen-Tests durchführen lassen kannst:",
+        probelyLink:"https://probely.com/?utm_medium=affiliate&utm_source=partner&utm_campaign=keywan",
+        openProbelyBtnText:"öffnen Probely"
     }
 
 };
