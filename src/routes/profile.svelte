@@ -29,36 +29,34 @@
 <svelte:head>
 	<title>{stringResources.profilePage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
-<h1 class="title m-4">Absichern und weiter Testen lassen durch Profies</h1>
-<h2 class="subtitle m-4">
-	Jährliches Sicherheits Budget für diese Website (empfohlen sind 10% des gesamt Budgets)
-</h2>
-<div class="box">
-	<div class="range-slider">
-		<input
-			class="range-slider__range"
-			id="rangeInput"
-			step="500"
-			type="range"
-			min="10000"
-			max="50000"
-			value="15000"
-		/>
-		<span class="range-slider__value">{rangeValue}</span>
+<div class="columns">
+	<div class="column is-half is-offset-3">
+		<h1 class="title m-4">{stringResources.profilePage.mainTitleLine}</h1>
+		<h2 class="subtitle m-4">{stringResources.profilePage.mainSubtitle}</h2>
+		<div class="box">
+			<div class="range-slider">
+				<input
+					class="range-slider__range"
+					id="rangeInput"
+					step="500"
+					type="range"
+					min="10000"
+					max="50000"
+					value="15000"
+				/>
+				<span class="range-slider__value">{rangeValue}</span>
+			</div>
+		</div>
+		<h3>{stringResources.profilePage.afterRangeText}</h3>
+		<br />
+		<button class="button mt-4 is-success is-outlined is-small" on:click={gotoNext}>
+			<span>{stringResources.profilePage.btnText}</span>
+			<span class="icon is-medium">
+				<i class="fas fa-check" />
+			</span>
+		</button>
 	</div>
 </div>
-<h3>
-	Empfohlen sind 10% des gesamt Budgets. Je nach Ausgangslage und Budget wird Ihr Angebot
-	verschiedene Komponenten beinhalten wie z.B. Firewalls, Pen-Tests und Programmmier und
-	Konfigurations Leistungen
-</h3>
-<br />
-<button class="button mt-4 is-success is-outlined is-small" on:click={gotoNext}>
-	<span>Jetzt unverbindliches Angebot fordern</span>
-	<span class="icon is-medium">
-		<i class="fas fa-check" />
-	</span>
-</button>
 
 <style>
 	.title {

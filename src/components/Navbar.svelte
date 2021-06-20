@@ -1,40 +1,13 @@
 <script>
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
-	let theme = 'light';
-	onMount(async () => {
-		let thValue = localStorage.getItem('theme');
-		if (thValue) {
-			theme = thValue;
-		}
-		implementTheme();
+	import stringResources from '../stringResources';
+	onMount(() => {
+		document.querySelector('.navbar-burger').addEventListener('click', () => {
+			document.querySelector('.navbar-burger').classList.toggle('is-active');
+			document.getElementById('navbarMenu').classList.toggle('is-active');
+		});
 	});
-
-	function implementTheme() {
-		let r = document.querySelector(':root');
-		if (theme == 'dark') {
-			r.style.setProperty('--brandColor', 'hsl(123, 84%, 29%)');
-			r.style.setProperty('--textDark', 'hsl(0, 0%, 100%)');
-			r.style.setProperty('--textLight', 'hsl(0, 16%, 84%)');
-			r.style.setProperty('--background', 'hsl(0, 0%, 0%)');
-			r.style.setProperty('--backgroundLight', 'hsl(0, 4%, 14%)');
-		} else {
-			r.style.setProperty('--brandColor', 'hsl(187, 95%, 40%)');
-			r.style.setProperty('--textDark', 'hsl(0, 0%, 0%)');
-			r.style.setProperty('--textLight', 'hsl(0, 4%, 20%)');
-			r.style.setProperty('--background', 'hsl(0, 0%, 100%)');
-			r.style.setProperty('--backgroundLight', 'hsl(0, 0%, 90%)');
-		}
-	}
-	function changeTheme() {
-		if (theme == 'dark') {
-			theme = 'light';
-		} else {
-			theme = 'dark';
-		}
-		localStorage.setItem('theme', theme);
-		implementTheme();
-	}
 	async function gotoHome() {
 		await goto('/');
 	}
@@ -56,16 +29,23 @@
 						<span class="icon">
 							<i class="fa fa-home" />
 						</span>
-						<span>Home</span>
+						<span>{stringResources.menu.firtsBtnText}</span>
 					</button>
 				</span>
-
 				<span class="navbar-item">
-					<button class="button is-outlined" on:click={changeTheme}>
+					<button class="button is-outlined" on:click={gotoHome}>
 						<span class="icon">
-							<i class="fa fa-adjust" />
+							<i class="fas fa-info" />
 						</span>
-						<span>Theme</span>
+						<span>{stringResources.menu.secondBtnText}</span>
+					</button>
+				</span>
+				<span class="navbar-item">
+					<button class="button is-outlined" on:click={gotoHome}>
+						<span class="icon">
+							<i class="fas fa-lock" />
+						</span>
+						<span>{stringResources.menu.thirdBtnText}</span>
 					</button>
 				</span>
 			</div>
