@@ -13,6 +13,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
 	let rangeValue = 15000;
 	onMount(() => {
@@ -29,7 +30,7 @@
 <svelte:head>
 	<title>{stringResources.profilePage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
-<div class="columns">
+<div class="columns" in:fade>
 	<div class="column is-half is-offset-3">
 		<h1 class="title m-4">{stringResources.profilePage.mainTitleLine}</h1>
 		<h2 class="subtitle m-4">{stringResources.profilePage.mainSubtitle}</h2>

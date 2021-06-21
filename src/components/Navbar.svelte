@@ -63,4 +63,9 @@
 		background-color: var(--brandColor) !important;
 		color: var(--background) !important;
 	}
+	.navbar-menu {
+		background-color: transparent !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+	}
 </style>

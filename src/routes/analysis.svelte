@@ -1,12 +1,13 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
 </script>
 
 <svelte:head>
 	<title>{stringResources.analysisPage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
-<div class="columns m-4">
+<div class="columns m-4" in:fade>
 	<div class="column is-half is-offset-3">
         <div class="box">
             <h4 id="const" class="title is-3">{stringResources.analysisPage.mainTitleText}</h4>

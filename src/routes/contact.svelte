@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
 
 	async function gotoNext() {
@@ -10,7 +11,7 @@
 <svelte:head>
 	<title>{stringResources.contactPage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
-<div class="columns">
+<div class="columns" in:fade>
 	<div class="column is-half is-offset-3">
 		<h3 class="title has-text-black">{stringResources.contactPage.mainTitle}</h3>
 

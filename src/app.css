@@ -11724,13 +11724,13 @@ main {
 }
 
 .message.is-primary .message-body {
-	border-color: var(--textLight) !important;
-	color: var(--textLight) !important;
+	border-color: var(--brandColor) !important;
+	color: var(--brandColor) !important;
 	background-color: var(--backgroundLight) !important;
 }
 
 #const {
-	color: var(--brandColor) !important;
+	color: var(--textDark) !important;
 }
 
 .button.is-link,
