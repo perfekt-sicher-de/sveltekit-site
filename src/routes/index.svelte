@@ -11,6 +11,7 @@
 <svelte:head>
 	<title>{stringResources.indexPage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
+
 <h1 class="title m-4">{stringResources.appName}</h1>
 <h2 class="subtitle m-4">{stringResources.indexPage.homeTagLine}</h2>
 <div class="columns m-4">

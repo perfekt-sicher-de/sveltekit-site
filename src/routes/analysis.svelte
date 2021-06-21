@@ -42,8 +42,4 @@
 	.title {
 		color: var(--textDark);
 	}
-	.subtitle {
-		color: var(--textLight);
-	}
-
 </style>
