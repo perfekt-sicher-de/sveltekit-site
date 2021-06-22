@@ -2,8 +2,13 @@
 	import { goto } from '$app/navigation';
 	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
+	let showAlert = false;
 	async function scanSite() {
 		let url = document.getElementById('url').value;
+		if (url == null || url == '') {
+			showAlert = true;
+			return;
+		}
 		url = 'www.check24.de';
 		await goto(`/result?url=${url}`);
 	}
@@ -12,6 +17,13 @@
 <svelte:head>
 	<title>{stringResources.indexPage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
+
+{#if showAlert}
+	<div class="notification is-danger" in:fade>
+		<button class="delete" on:click={() => (showAlert = false)} />
+		{stringResources.indexPage.urlMissingMsg}
+	</div>
+{/if}
 <div in:fade>
 	<h1 class="title m-4">{stringResources.appName}</h1>
 	<h2 class="subtitle m-4">{stringResources.indexPage.homeTagLine}</h2>
@@ -24,7 +36,7 @@
 					type="url"
 					placeholder={stringResources.indexPage.scanInputPlaceHolder}
 				/>
-				<button class="button m-2 is-info is-outlined is-4" on:click={scanSite}>
+				<button class="button m-2 is-outlined is-4" on:click={scanSite}>
 					{stringResources.indexPage.scanStartBtnText}
 				</button>
 			</div>

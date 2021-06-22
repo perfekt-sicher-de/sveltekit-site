@@ -11,6 +11,12 @@
 	async function gotoHome() {
 		await goto('/');
 	}
+	async function gotoImpressum() {
+		await goto('/impressum');
+	}
+	async function gotoDatenschutz() {
+		await goto('/datenschutz');
+	}
 </script>
 
 <nav class="navbar">
@@ -33,7 +39,7 @@
 					</button>
 				</span>
 				<span class="navbar-item">
-					<button class="button is-outlined" on:click={gotoHome}>
+					<button class="button is-outlined" on:click={gotoImpressum}>
 						<span class="icon">
 							<i class="fas fa-info" />
 						</span>
@@ -41,7 +47,7 @@
 					</button>
 				</span>
 				<span class="navbar-item">
-					<button class="button is-outlined" on:click={gotoHome}>
+					<button class="button is-outlined" on:click={gotoDatenschutz}>
 						<span class="icon">
 							<i class="fas fa-lock" />
 						</span>

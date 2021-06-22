@@ -7,6 +7,7 @@
 <svelte:head>
 	<title>{stringResources.analysisPage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
+
 <div class="columns m-4" in:fade>
 	<div class="column is-half is-offset-3">
         <div class="box">
