@@ -24,6 +24,7 @@
 		{stringResources.indexPage.urlMissingMsg}
 	</div>
 {/if}
+
 <div in:fade>
 	<h1 class="title m-4">{stringResources.appName}</h1>
 	<h2 class="subtitle m-4">{stringResources.indexPage.homeTagLine}</h2>

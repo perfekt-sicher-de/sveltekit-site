@@ -10,12 +10,15 @@
 	});
 	async function gotoHome() {
 		await goto('/');
+		document.querySelector('.navbar-burger').click();
 	}
 	async function gotoImpressum() {
 		await goto('/impressum');
+		document.querySelector('.navbar-burger').click();
 	}
 	async function gotoDatenschutz() {
 		await goto('/datenschutz');
+		document.querySelector('.navbar-burger').click();
 	}
 </script>
 
@@ -28,7 +31,7 @@
 				<span />
 			</span>
 		</div>
-		<div id="navbarMenu" class="navbar-menu">
+		<div id="navbarMenu" class="navbar-menu is-desktop">
 			<div class="navbar-end">
 				<span class="navbar-item">
 					<button class="button is-outlined" on:click={gotoHome}>
@@ -64,6 +67,7 @@
 		border-color: var(--brandColor) !important;
 		color: var(--brandColor) !important;
 		background-color: transparent;
+		width: -webkit-fill-available !important;
 	}
 	.navbar-item .button:hover {
 		background-color: var(--brandColor) !important;
