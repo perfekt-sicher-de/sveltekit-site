@@ -15,14 +15,24 @@
 					<i class="fas fa-info" />
 				</span>
 			</div>
-			<div class="message-body">
-				{stringResources.impressumPage.mainText}
+			<div class="message-body content has-text-left">
+				<h1>Über Sicherheit für Unternehmen</h1>
+				<p>Sicherheit für Unternehmen ist eine Seite von Keywan Ghadami.</p>
+				<h2>Angaben gemäß § 5 TMG:</h2>
+				<p><strong>Keywan Ghadami</strong></p>
+				<p>
+					Bodenlei 83, 79112 Freiburg i. Br.<br />Keine Umsatzsteuer-Identifikationsnummer und kein
+					Eintrag ins Handelsregister.<br />Kontakt: keywan.ghadami@gmail.com
+				</p>
 			</div>
 		</article>
 	</div>
 </div>
 
 <style>
+	.message{
+		word-break: break-all;
+	}
 	.message-body {
 		background-color: var(--background) !important;
 		color: var(--brandColor) !important;

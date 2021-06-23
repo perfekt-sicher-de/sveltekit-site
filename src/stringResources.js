@@ -46,8 +46,7 @@ const stringResources = {
         mainText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla.Nullam gravida purus diam, et dictum efficitur. Aenean ac, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor,tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et semeget, facilisis sodales sem."
     },
     datenPage:{
-        titleTag: "Datenschutz",
-        mainText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla.Nullam gravida purus diam, et dictum efficitur. Aenean ac, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor,tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et semeget, facilisis sodales sem."
+        titleTag: "Datenschutz"
    
     }
 

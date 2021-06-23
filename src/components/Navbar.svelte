@@ -32,7 +32,7 @@
 			</span>
 		</div>
 		<div id="navbarMenu" class="navbar-menu is-desktop">
-			<div class="navbar-end">
+			<div class="navbar">
 				<span class="navbar-item">
 					<button class="button is-outlined" on:click={gotoHome}>
 						<span class="icon">
@@ -77,5 +77,8 @@
 		background-color: transparent !important;
 		box-shadow: none !important;
 		padding: 0 !important;
+	}
+	.navbar-burger{
+		margin-left: 0;
 	}
 </style>
