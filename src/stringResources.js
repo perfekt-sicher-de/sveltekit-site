@@ -33,7 +33,8 @@ const stringResources = {
         titleTag: "Contact",
         mainTitle: "Angebot anfordern",
         checkBoxText: "Ich teste auch für Klienten oder Tochterunternehmen",
-        btnText: "Anfordern"
+        btnText: "Anfordern",
+        successMsg:"Your request has successfully been sent, close this notification to go back to home."
     },
     analysisPage: {
         titleTag: "Pen-Test Analysis",
