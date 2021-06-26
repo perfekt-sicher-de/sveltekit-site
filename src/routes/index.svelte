@@ -34,7 +34,6 @@
 					class="input mt-2 mb-2"
 					id="url"
 					type="url"
-					value="www.check24.de"
 					placeholder={stringResources.indexPage.scanInputPlaceHolder}
 				/>
 				<button class="button m-2 is-outlined is-4" on:click={scanSite}>
