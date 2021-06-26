@@ -1,7 +1,7 @@
 import nadapter from '@sveltejs/adapter-node';
 import sadapter from '@sveltejs/adapter-static';
 let adapter;
-let spaMode = true;
+let spaMode = false;
 if (spaMode) {
 	adapter = sadapter({
 		fallback: '200.html'

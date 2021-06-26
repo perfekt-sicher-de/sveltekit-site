@@ -19,7 +19,8 @@ const stringResources = {
         normalTagText: "Normal",
         goodTagText: "Good",
         profileBtnText: "Absichern und weiter Testen lassen durch Profies",
-        backBtnText: "Kostenlos selber weiter Testen"
+        backBtnText: "Kostenlos selber weiter Testen",
+        noDataError:"Couldn't get data for this url."
     },
     profilePage: {
         titleTag: "Choose Security Profile",

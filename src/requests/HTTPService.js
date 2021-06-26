@@ -8,7 +8,6 @@ export async function SendGetRequest(url) {
         return json;
     }
     catch (err) {
-        console.log(err);
         return null;
     }
 }
