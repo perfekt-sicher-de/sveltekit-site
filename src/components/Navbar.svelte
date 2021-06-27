@@ -94,6 +94,7 @@
 	.overlay .closebtn:hover,
 	.overlay .closebtn:focus {
 		color: #f1f1f1;
+		cursor: pointer;
 	}
 
 	.overlay .closebtn {
