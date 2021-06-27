@@ -1,10 +1,12 @@
 import nadapter from '@sveltejs/adapter-node';
 import sadapter from '@sveltejs/adapter-static';
 let adapter;
-let spaMode = false;
+let spaMode = true;
 if (spaMode) {
 	adapter = sadapter({
-		fallback: '200.html'
+		pages: 'build',
+		assets: 'build',
+		fallback: null
 	});
 
 }
