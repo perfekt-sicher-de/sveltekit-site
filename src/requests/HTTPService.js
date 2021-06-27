@@ -25,7 +25,6 @@ export async function SendPostRequest(url, data) {
         return json;
     }
     catch (err) {
-        console.log(err);
         return null;
     }
 }
