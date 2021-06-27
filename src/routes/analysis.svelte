@@ -17,8 +17,7 @@
                 {stringResources.analysisPage.mainSubtitleText}
               </div>
             </article>
-            <input class="input mt-2" value="{stringResources.analysisPage.probelyLink}"/>
-			<a href="{stringResources.analysisPage.probelyLink}" target="_blank" class="button mt-2 is-info is-outlined">
+			<a href="{stringResources.analysisPage.probelyLink}" target="_blank" class="button mt-2 is-outlined">
 				{stringResources.analysisPage.openProbelyBtnText}
 			</a>
         </div>

@@ -109,4 +109,7 @@
 			right: 35px;
 		}
 	}
+	button{
+		border: none !important;
+	}
 </style>
