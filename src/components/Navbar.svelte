@@ -16,7 +16,12 @@
 		closeNav();
 	}
 	function openNav() {
-		document.getElementById('myNav').style.width = '100%';
+		let x = window.matchMedia('(min-width: 450px)');
+		if (x.matches) {
+			document.getElementById('myNav').style.width = '25%';
+		} else {
+			document.getElementById('myNav').style.width = '100%';
+		}
 	}
 
 	function closeNav() {
@@ -28,31 +33,25 @@
 	<h1 href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</h1>
 	<div class="overlay-content">
 		<div class="columns m-4">
-			<div class=" column is-half is-offset-3 p-4">
-				<span class="navbar-item">
-					<button class="button is-outlined" on:click={gotoHome}>
+			<div class=" column is-half p-4">
+					<button class="button m-4 is-block" on:click={gotoHome}>
 						<span class="icon">
 							<i class="fa fa-home" />
 						</span>
 						<span>{stringResources.menu.firtsBtnText}</span>
 					</button>
-				</span>
-				<span class="navbar-item">
-					<button class="button is-outlined" on:click={gotoImpressum}>
+					<button class="button m-4 is-block" on:click={gotoImpressum}>
 						<span class="icon">
 							<i class="fas fa-info" />
 						</span>
 						<span>{stringResources.menu.secondBtnText}</span>
 					</button>
-				</span>
-				<span class="navbar-item">
-					<button class="button is-outlined" on:click={gotoDatenschutz}>
+					<button class="button m-4 is-block" on:click={gotoDatenschutz}>
 						<span class="icon">
 							<i class="fas fa-lock" />
 						</span>
 						<span>{stringResources.menu.thirdBtnText}</span>
 					</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -60,14 +59,12 @@
 <span style="font-size:50px;cursor:pointer" class="p-4" on:click={openNav}>&#9776;</span>
 
 <style>
-	.navbar-item .button {
-		border-color: var(--brandColor) !important;
+	button {
 		color: var(--brandColor) !important;
 		background-color: transparent;
-		width: -webkit-fill-available !important;
+		border: none;
 	}
-	.navbar-item .button:hover {
-		background-color: var(--brandColor) !important;
+	button:hover {
 		color: var(--background) !important;
 	}
 	.overlay {
@@ -85,7 +82,7 @@
 
 	.overlay-content {
 		position: relative;
-		top: 25%;
+		top: 5%;
 		width: 100%;
 		text-align: center;
 		margin-top: 30px;
@@ -102,14 +99,10 @@
 		right: 45px;
 		font-size: 60px;
 	}
-
 	@media screen and (max-height: 450px) {
 		.overlay .closebtn {
 			font-size: 40px;
 			right: 35px;
 		}
-	}
-	button{
-		border: none !important;
 	}
 </style>
