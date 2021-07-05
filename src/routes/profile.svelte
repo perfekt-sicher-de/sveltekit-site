@@ -41,11 +41,11 @@
 					id="rangeInput"
 					step="500"
 					type="range"
-					min="10000"
-					max="50000"
+					min="1000"
+					max="500000"
 					value="15000"
 				/>
-				<span class="range-slider__value">{rangeValue}</span>
+				<span class="range-slider__value">{rangeValue} €</span>
 			</div>
 		</div>
 		<h3>{stringResources.profilePage.afterRangeText}</h3>
@@ -72,7 +72,7 @@
 	}
 	.range-slider__range {
 		-webkit-appearance: none;
-		width: calc(100% - (73px));
+		width: calc(100% - (113px));
 		height: 10px;
 		border-radius: 5px;
 		background: var(--backgroundLight);
@@ -99,7 +99,7 @@
 	.range-slider__value {
 		display: inline-block;
 		position: relative;
-		width: 60px;
+		width: 100px;
 		color: var(--brandColor);
 		line-height: 20px;
 		text-align: center;

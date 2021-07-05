@@ -45,14 +45,6 @@
 </div>
 
 <style>
-	.button {
-		border-color: var(--brandColor) !important;
-		color: var(--brandColor) !important;
-	}
-	.button:hover {
-		background-color: var(--brandColor) !important;
-		color: var(--background) !important;
-	}
 	input:focus {
 		border-color: var(--brandColor) !important;
 	}

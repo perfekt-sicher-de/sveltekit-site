@@ -13,7 +13,7 @@
 			<div class="message-header">
 				<span class="icon">
 					<i class="fas fa-lock" />
-				</span>
+				</span> Datenschutz
 			</div>
 			<div class="message-body content has-text-left">
 				<h1>Datenschutzerklärung</h1>

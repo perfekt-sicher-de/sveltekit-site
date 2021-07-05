@@ -8,12 +8,12 @@
 </svelte:head>
 
 <div class="columns m-4" in:fade>
-	<div class=" column is-half is-offset-3 p-4">
+	<div class="column is-10 is-offset-1 p-4">
 		<article class="message">
 			<div class="message-header">
 				<span class="icon">
 					<i class="fas fa-info" />
-				</span>
+				</span>Impressum
 			</div>
 			<div class="message-body content has-text-left">
 				<h1>Über Sicherheit für Unternehmen</h1>
