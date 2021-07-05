@@ -1,5 +1,5 @@
 import { SendGetRequest } from './HTTPService';
-import { baseURL } from './Common';
+import { scanURL } from './Common';
 export async function GetWebsiteSecurityScore(url) {
-    return await SendGetRequest(`${baseURL}?domain=${url}`);
+    return await SendGetRequest(`${scanURL}?domain=${url}`);
 }

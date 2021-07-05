@@ -1,5 +1,5 @@
 import { SendPostRequest } from './HTTPService';
-import { baseURL } from './Common';
+import { contactURL } from './Common';
 export async function PostContactQuery(data) {
-    return await SendPostRequest(baseURL, data);
+    return await SendPostRequest(contactURL, data);
 }
