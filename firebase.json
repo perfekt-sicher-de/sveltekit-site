@@ -5,6 +5,17 @@
             "firebase.json",
             "**\/.*",
             "**\/node_modules\/**"
+        ],
+        "headers": [
+            {
+                "source": "*",
+                "headers": [
+                    {
+                        "key": "content-security-policy",
+                        "value": "default-src 'self'; connect-src https:\/\/xn--it-sicherheit-fr-unternehmen-g7c.de\/; img-src 'self' data:; script-src 'self' 'sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' 'sha256-PtKjt72GBUlGFBGL2nRjhjWstCuqW202w6Mjvz\/jKuo=' 'sha256-N8S2pgPrK6n7COgunH2J0IiU4+7J2oehgIRaGdr6pto=' 'sha256-e0MzUN3sUCOjlV0Fe9KebSkGEEjYskhxMUA9rRCVTBg=' 'sha256-s+Ka+1uejLEWoRXuJV534ntZSxxSMOUg6pWfMV4Z16E=' 'sha256-1sdePIRZb37eKlFvh77R2DcuwHaZDcjqpx55b+LeoiQ=' 'sha256-iLcWaM5UXa+7dsnV+LEMcMl51hj3mgtKmwhemQmJ2qE=' 'sha256-XAAZ0VpByt46Sb7M\/rMaBr7H6wbqvIsE+L56hJWuDFw='; style-src 'self' 'sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' "
+                    }
+                ]
+            }
         ]
     }
 }

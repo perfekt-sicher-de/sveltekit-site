@@ -23,5 +23,9 @@
   "type": "module",
   "engines": {
     "node": ">= 12.17.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "html-minifier": "^4.0.0"
   }
 }

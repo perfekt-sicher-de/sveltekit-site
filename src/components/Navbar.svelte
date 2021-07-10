@@ -56,9 +56,12 @@
 		</div>
 	</div>
 </div>
-<span style="font-size:50px;cursor:pointer" class="p-4" on:click={openNav}>&#9776;</span>
+<span class="navOpener p-4" on:click={openNav}>&#9776;</span>
 
 <style>
+	.navOpener {
+		cursor:pointer
+	}
 	button {
 		color: var(--brandColor) !important;
 		background-color: transparent;

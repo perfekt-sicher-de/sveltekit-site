@@ -382,7 +382,7 @@
 						href="https://www.adsimple.de/datenschutz-generator/"
 						target="_blank"
 						rel="follow"
-						style="text-decoration: none;">Datenschutz Generator</a
+						>Datenschutz Generator</a
 					>
 					von AdSimple&nbsp;in Kooperation mit
 					<a href="https://www.123familie.de" target="_blank" rel="follow" title="">123familie.de</a
