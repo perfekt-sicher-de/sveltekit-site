@@ -25,14 +25,7 @@
 </div>
 
 <style>
-    input{
-        height: 60px;
-        word-wrap: break-word;
-    }
-	input:focus {
-		border-color: var(--brandColor) !important;
-	}
-	.title {
+    .title {
 		color: var(--textDark);
 	}
 </style>
