@@ -13,10 +13,13 @@
 	export let url;
 	let isLoading = true;
 	let showAlert = false;
+	let score = 0;
 	import { onMount, tick } from 'svelte';
 	import stringResources from '../stringResources';
 	import { goto } from '$app/navigation';
 	import { fade } from 'svelte/transition';
+	import Speedometer from "svelte-speedometer";
+
 	import Loader from '../components/Loader.svelte';
 	import { GetWebsiteSecurityScore } from '../requests/SecurityScanRequests';
 	onMount(async () => {
@@ -30,52 +33,12 @@
 				throw 'No data found';
 			}
 			isLoading = false;
-			await createGaugeWidget(response.score);
+			score = response.score;
+			await tick();
 		} catch (error) {
 			isLoading = false;
 			await tick();
 			showAlert = true;
-		}
-	}
-	async function createGaugeWidget(score) {
-		try {
-			await tick();
-			var opts = {
-				angle: 0,
-				lineWidth: 0.2,
-				radiusScale: 1,
-				pointer: {
-					length: 0.6,
-					strokeWidth: 0.035,
-					color: '#000000'
-				},
-				limitMax: false, // If false, max value increases automatically if value > maxValue
-				limitMin: false, // If true, the min value of the gauge will be fixed
-				colorStart: '#6F6EA0', // Colors
-				colorStop: '#C0C0DB', // just experiment with them
-				strokeColor: '#EEEEEE', // to see which ones work best for you
-				generateGradient: true,
-				highDpiSupport: true, // High resolution support,
-				staticLabels: {
-					font: '10px sans-serif', // Specifies font
-					labels: [0, 40, 70, 100, score], // Print labels at these values
-					color: '#000000', // Optional: Label text color
-					fractionDigits: 0 // Optional: Numerical precision. 0=round off.
-				},
-				staticZones: [
-					{ strokeStyle: '#F03E3E', min: 0, max: 40 },
-					{ strokeStyle: '#FFDD00', min: 40, max: 70 },
-					{ strokeStyle: '#30B32D', min: 70, max: 100 }
-				]
-			};
-			var target = document.getElementById('scanMeter');
-			var gauge = new Gauge(target).setOptions(opts);
-			gauge.maxValue = 100;
-			gauge.setMinValue(0);
-			gauge.animationSpeed = 32;
-			gauge.set(score);
-		} catch (error) {
-			throw "can't create guage";
 		}
 	}
 	async function handleNext() {
@@ -108,7 +71,13 @@
 	{:else}
 		<h1 class="title m-4" in:fade>{stringResources.resultPage.resultTitle}</h1>
 		<h2 class="subtitle m-4" in:fade>{url}</h2>
-		<canvas id="scanMeter" class="m-4" in:fade />
+		<Speedometer
+				value={score}
+				segments={3}
+				maxValue={100}
+				height={200}
+				segmentColors={["#f03e3e","#ffdd00","#30b32d"]}
+		/>
 		<div class="field has-addons columns is-8" in:fade>
 			<p class="control">
 				<button class="button is-small" style="background-color:#F03E3E;color:white;">

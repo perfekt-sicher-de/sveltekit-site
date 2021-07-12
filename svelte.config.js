@@ -17,6 +17,11 @@ else {
 }
 export default {
 	kit: {
-		adapter: adapter
+		adapter: adapter,
+		vite: {
+			optimizeDeps: {
+				exclude: ['svelte-speedometer']
+			}
+		}
 	}
 };
