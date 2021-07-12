@@ -77,6 +77,14 @@
 				maxValue={100}
 				height={200}
 				segmentColors={["#f03e3e","#ffdd00","#30b32d"]}
+				ringWidth={25}
+				customSegmentStops={[0,40,70,100]}
+				needleTransitionDuration={4000}
+				needleTransition="easeElastic"
+				labelFontSize={"10px"}
+				valueTextFontSize={"10px"}
+
+
 		/>
 		<div class="field has-addons columns is-8" in:fade>
 			<p class="control">
