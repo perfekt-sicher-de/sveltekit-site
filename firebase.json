@@ -1,21 +1,64 @@
 {
-    "hosting": {
-        "public": "build",
-        "ignore": [
-            "firebase.json",
-            "**\/.*",
-            "**\/node_modules\/**"
-        ],
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**\/.*",
+      "**\/node_modules\/**"
+    ],
+    "headers": [
+      {
+        "source": "*",
         "headers": [
-            {
-                "source": "*",
-                "headers": [
-                    {
-                        "key": "content-security-policy",
-                        "value": "default-src 'self'; connect-src https:\/\/xn--it-sicherheit-fr-unternehmen-g7c.de\/; img-src 'self' data:; script-src 'self' 'sha256-pCV4sj\/vz85WG4AaV6ZhRkMe3YAcpMfsJskkh8sXECI=' 'sha256-OGU2RbOzO1dzB\/+g\/dhNmtPW1ENLmFb92RohV9LWPnE=' 'sha256-rH11AiPoUNHkv4Lt4+O5DZ90mC\/DGOZGTLeyFaPh1uA=' 'sha256-lWh45G6PeoyHVleudwQExrrWkWaU6MdqqBu8+bnXx88=' 'sha256-8xccPcbKqSMcKhAZ9f95twcPqyhiWRZgP0KdYwrcJek=' 'sha256-tUJ\/AqSNQu0PZKy39Bf6kdf2evpBhB0Og0ezAI7zufs=' 'sha256-1cg3oFhS4dfjxaub1RVyoopbvthBKiI\/JqmnNL0i9uw='; style-src 'self' 'sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' "
-                    }
-                ]
-            }
+          {
+            "key": "content-security-policy",
+            "value": "default-src 'self'; connect-src https:\/\/xn--it-sicherheit-fr-unternehmen-g7c.de\/; img-src 'self' data:; script-src 'self' 'sha256-pCV4sj\/vz85WG4AaV6ZhRkMe3YAcpMfsJskkh8sXECI=' 'sha256-OGU2RbOzO1dzB\/+g\/dhNmtPW1ENLmFb92RohV9LWPnE=' 'sha256-rH11AiPoUNHkv4Lt4+O5DZ90mC\/DGOZGTLeyFaPh1uA=' 'sha256-lWh45G6PeoyHVleudwQExrrWkWaU6MdqqBu8+bnXx88=' 'sha256-8xccPcbKqSMcKhAZ9f95twcPqyhiWRZgP0KdYwrcJek=' 'sha256-tUJ\/AqSNQu0PZKy39Bf6kdf2evpBhB0Og0ezAI7zufs=' 'sha256-1cg3oFhS4dfjxaub1RVyoopbvthBKiI\/JqmnNL0i9uw='; style-src 'self' 'sha256-47DEQpj8HBSa+\/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' "
+          },
+          {
+            "key": "cache-control",
+            "value": "max-age=4000, public"
+          },
+          {
+            "key": "strict-transport-security",
+            "value": "max-age=16070400"
+          },
+          {
+            "key": "x-frame-options",
+            "value": "DENY"
+          },
+          {
+            "desc": "dying see https:\/\/developer.mozilla.org\/en-US\/docs\/Web\/HTTP\/Headers\/X-XSS-Protection",
+            "key": "x-xss-protection",
+            "value": "1; mode=block"
+          },
+          {
+            "key": "x-content-type-options",
+            "value": "nosniff"
+          },
+          {
+            "key": "referrer-policy",
+            "value": "no-referrer"
+          },
+          {
+            "desc": "https:\/\/github.com\/w3c\/webappsec-permissions-policy\/blob\/master\/features.md",
+            "key": "permissions-policy",
+            "value": "accelerometer=(), ambient-light-sensor=(), autoplay=(), battery=(), camera=(), cross-origin-isolated=(), display-capture=(), document-domain=(), encrypted-media=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), navigation-override=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), sync-xhr=(), usb=(), vr=(), microphone=(), midi=(), wake-lock=(), screen-wake-lock=(), web-share=(), xr-spatial-tracking=(), legacy-image-formats=(), layout-animations=(), unoptimized-images=(), oversized-images=(), sync-script=(), sync-xhr=(), unsized-media=()"
+          },
+          {
+            "key": "feature-policy",
+            "value": "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; camera 'none'; display-capture 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-get 'none'; sync-xhr 'none'; usb 'none'; vr 'none'; microphone 'none'; midi 'none'; wake-lock 'none'; screen-wake-lock 'none'; web-share 'none'; xr-spatial-tracking 'none'; legacy-image-formats 'none'; layout-animations 'none'; unoptimized-images 'none'; oversized-images 'none'; sync-script 'none'; sync-xhr 'none'; unsized-media 'none';"
+          }
         ]
-    }
+      },
+      {
+        "source": "_app\/*.*",
+        "headers": [
+          {
+            "key": "cache-control",
+            "value": "max-age=86400, public"
+          }
+        ]
+      }
+    ]
+  }
 }
