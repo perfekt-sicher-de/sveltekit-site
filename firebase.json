@@ -6,9 +6,10 @@
       "**\/.*",
       "**\/node_modules\/**"
     ],
+    "cleanUrls": true,
     "headers": [
       {
-        "source": "*",
+        "regex": "^/[^.]*$",
         "headers": [
           {
             "key": "content-security-policy",
@@ -16,7 +17,7 @@
           },
           {
             "key": "cache-control",
-            "value": "max-age=4000, public"
+            "value": "max-age=2000, public"
           },
           {
             "key": "strict-transport-security",
@@ -51,7 +52,7 @@
         ]
       },
       {
-        "source": "_app\/*.*",
+        "source": "_app\/**",
         "headers": [
           {
             "key": "cache-control",
