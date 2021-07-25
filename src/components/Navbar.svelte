@@ -1,5 +1,10 @@
 <script>
 	import { onMount } from 'svelte';
+	import Fa from 'svelte-fa/src/fa.svelte';
+	import { faInfo } from '@fortawesome/free-solid-svg-icons'
+	import { faLock } from '@fortawesome/free-solid-svg-icons'
+	import { faHome } from '@fortawesome/free-solid-svg-icons'
+
 	import { goto } from '$app/navigation';
 	import stringResources from '../stringResources';
 	onMount(() => {});
@@ -36,19 +41,19 @@
 			<div class=" column is-half p-4">
 					<button class="button m-4 is-block" on:click={gotoHome}>
 						<span class="icon">
-							<i class="fa fa-home" />
+							<Fa icon={faHome} />
 						</span>
 						<span>{stringResources.menu.firtsBtnText}</span>
 					</button>
 					<button class="button m-4 is-block" on:click={gotoImpressum}>
 						<span class="icon">
-							<i class="fas fa-info" />
+							<Fa icon={faInfo} />
 						</span>
 						<span>{stringResources.menu.secondBtnText}</span>
 					</button>
 					<button class="button m-4 is-block" on:click={gotoDatenschutz}>
 						<span class="icon">
-							<i class="fas fa-lock" />
+							<Fa icon={faLock} />
 						</span>
 						<span>{stringResources.menu.thirdBtnText}</span>
 					</button>

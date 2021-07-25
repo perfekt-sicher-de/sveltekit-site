@@ -25,8 +25,9 @@
     "node": ">= 12.17.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "html-minifier": "^4.0.0",
+    "svelte-fa": "^2.2.1",
     "svelte-speedometer": "^1.1.0"
   }
 }

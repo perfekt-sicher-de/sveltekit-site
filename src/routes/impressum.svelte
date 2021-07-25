@@ -1,6 +1,9 @@
 <script>
 	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
+	import Fa from 'svelte-fa/src/fa.svelte';
+	import { faInfo } from '@fortawesome/free-solid-svg-icons'
+
 </script>
 
 <svelte:head>
@@ -12,7 +15,8 @@
 		<article class="message">
 			<div class="message-header">
 				<span class="icon">
-					<i class="fas fa-info" />
+					<Fa icon={faInfo} />
+					<!--i class="fas fa-info" /-->
 				</span>Impressum
 			</div>
 			<div class="message-body content has-text-left">
