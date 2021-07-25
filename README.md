@@ -9,6 +9,8 @@ This is the code for my-security-check.com
 
 # how to build / test
 
+to create the optimized build which minimizes CSS/HTML/JS and extract security information run: 
+
 - php extract-hashes.php
 - firebase serve
 
