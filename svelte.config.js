@@ -1,3 +1,4 @@
+import path from 'path';
 import nadapter from '@sveltejs/adapter-node';
 import sadapter from '@sveltejs/adapter-static';
 let adapter;
@@ -19,6 +20,11 @@ export default {
 	kit: {
 		adapter: adapter,
 		vite: {
+			resolve: {
+				alias: {
+					$components: path.resolve('./src/components'),
+				}
+			},
 			optimizeDeps: {
 				exclude: ['svelte-speedometer']
 			}
