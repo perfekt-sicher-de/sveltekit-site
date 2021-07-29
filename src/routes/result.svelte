@@ -132,7 +132,4 @@
 	h2 {
 		color: var(--brandColor);
 	}
-	.title {
-		color: var(--textDark);
-	}
 </style>

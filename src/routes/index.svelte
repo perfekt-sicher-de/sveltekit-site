@@ -50,7 +50,7 @@
 		<Category id="antivirus"/>
 		<Category id="firewall"/>
 		<Category id="waf" />
-		<Category id="dast" />
+		<Category id="ast" />
 	</div>
 	<div class="tile is-ancestor">
 		<Category id="handsOn" />
@@ -59,15 +59,4 @@
 		<Category id="penTest" />
 	</div>
 </div>
-<style>
-	input:focus {
-		border-color: var(--brandColor) !important;
-	}
-	.title {
-		color: var(--textDark);
-	}
-	.subtitle {
-		color: var(--textLight);
-	}
-</style>
 

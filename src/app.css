@@ -65,3 +65,25 @@ main {
   color: var(--background);
 }
 
+input:focus {
+	border-color: var(--brandColor) !important;
+}
+.title {
+	color: var(--textDark);
+}
+.subtitle {
+	color: var(--textLight);
+}
+
+
+/** imprint and terms **/
+.message{
+	word-break: break-all;
+}
+.message-body {
+	background-color: var(--background) !important;
+	color: var(--brandColor) !important;
+}
+.message-header {
+	background-color: var(--brandColor) !important;
+}

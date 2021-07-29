@@ -60,12 +60,6 @@
 </div>
 
 <style>
-	.title {
-		color: var(--textDark);
-	}
-	.subtitle {
-		color: var(--textLight);
-	}
 	.range-slider {
 		margin: 60px 0 0 0%;
 		width: 100%;

@@ -3,7 +3,7 @@
 	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
 	import { PostContactQuery } from '../requests/ContactRequests';
-	import Loader from '$components/Loader.svelte';
+	import Loader from '../components/Loader.svelte';
 	let showSuccessNotification = false;
 	let isLoading = false;
 	async function gotoHome() {
@@ -121,12 +121,3 @@
 		</div>
 	{/if}
 {/if}
-
-<style>
-	input:focus {
-		border-color: var(--brandColor) !important;
-	}
-	.title {
-		color: var(--textDark);
-	}
-</style>
