@@ -1,8 +1,15 @@
-# my-security-check.com
+# https://my-security-check.com
 
-This is the code for my-security-check.com
+Is the website to support companies to secure there business.
+It's made for their needs.
 
-# How to start
+The vode that you see here is made with support form experts from all over the world.
+
+It is open source to provide the maximum of transparency.
+Everyone can check the code, report issues, add suggestions and contribute.
+
+
+# How to start developing
 
 - npm install
 - npm run dev
@@ -16,3 +23,8 @@ to create the optimized build which minimizes CSS/HTML/JS and extract security i
 
 # Contributens are welcome
 
+you miss a product or feature just open a issue
+
+# security bug bounty
+
+you found a secu issue, maybe a security issue, then please contact me directly
