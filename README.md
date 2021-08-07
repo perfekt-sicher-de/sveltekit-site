@@ -25,6 +25,6 @@ to create the optimized build which minimizes CSS/HTML/JS and extract security i
 
 you miss a product or feature just open a issue
 
-# security bug bounty
+# security bug found?
 
-you found a secu issue, maybe a security issue, then please contact me directly
+you found a security issue? please contact me direct message/email.
