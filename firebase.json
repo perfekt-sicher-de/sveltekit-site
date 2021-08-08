@@ -13,7 +13,7 @@
                 "headers": [
                     {
                         "key": "content-security-policy",
-                        "value": "default-src 'self'; connect-src https:\/\/xn--it-sicherheit-fr-unternehmen-g7c.de\/; img-src 'self' data:; script-src 'self' 'sha256-IR\/SbILG3F6qCoqIsBtRdAXkX\/BQQQQIcndsVem9k64=' 'sha256-UQnoiiLZdjeyw8CLrjugDQ5pO4elpZOoVnI408azgGU=' 'sha256-sUJ+YH9XytzRm2e16m7oRzs0QvfMa63G\/69a2BlOzDc=' 'sha256-7Sdey1igwY\/N7JRtYZ1DyoYOsP9rMoY\/DPF+xmawoGA=' 'sha256-TbQQIj7yfLozYvOpgmFpCGfk8fx8hh\/5OZCvXNst7oI=' 'sha256-qqzpWL+HIfE7843lS5f1YVbpMePkYWtEHeKtU5fD2rc=' 'sha256-fevnJKJ66Iri\/+S4zD9W6Ymyt55rGjqR9rU5Z2a4jUk='; style-src 'self' 'unsafe-hashes' 'unsafe-inline' "
+                        "value": "default-src 'self'; connect-src https:\/\/xn--it-sicherheit-fr-unternehmen-g7c.de\/; img-src 'self' data:; script-src 'self' 'unsafe-hashes' 'unsafe-inline'; style-src 'self' 'unsafe-hashes' 'unsafe-inline' "
                     },
                     {
                         "key": "cache-control",

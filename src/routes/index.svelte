@@ -1,6 +1,5 @@
 <script>
 	import { goto } from '$app/navigation';
-	import Category from '$components/Category.svelte';
 	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
 	let showAlert = false;
@@ -47,27 +46,16 @@
 		</div>
 	</div>
 	<div class="tile is-ancestor">
-		<Category id="antivirus"/>
-		<Category id="firewall"/>
-		<Category id="waf" />
-		<Category id="dast" />
+		<CategoryTile id="antivirus"/>
+		<CategoryTile id="firewall"/>
+		<CategoryTile id="waf" />
+		<CategoryTile id="ast" />
 	</div>
 	<div class="tile is-ancestor">
-		<Category id="handsOn" />
-		<Category id="secDev" />
-		<Category id="siem" />
-		<Category id="penTest" />
+		<CategoryTile id="handsOn" />
+		<CategoryTile id="secDev" />
+		<CategoryTile id="siem" />
+		<CategoryTile id="penTest" />
 	</div>
 </div>
-<style>
-	input:focus {
-		border-color: var(--brandColor) !important;
-	}
-	.title {
-		color: var(--textDark);
-	}
-	.subtitle {
-		color: var(--textLight);
-	}
-</style>
 

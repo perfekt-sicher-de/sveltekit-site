@@ -8,7 +8,7 @@ const stringResources = {
     indexPage: {
         titleTag: "Home",
         homeTagLine: "Hier kann ich meine Domains kostenlos und gefahrlos überprüfen",
-        aboutText: "Ein Service von bereitgestellt von Keywan Ghadami IT Sicherheit für Unternehmen.\n" +
+        aboutText: "Ein Service bereitgestellt von Keywan Ghadami IT Sicherheit für Unternehmen.\n" +
             "Meine Mission - IT Sicherheit. Hier vergleichen Sie Anbieter und Produkte, lassen Ihre Systeme testen oder informieren sich.\n" +
             "\n" +
             "Meine Motivation: Besser sein als die Kriminellen und unsere digitale Zukunft auf sichere Beine stellen.\n" +

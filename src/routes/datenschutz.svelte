@@ -395,16 +395,3 @@
 		</article>
 	</div>
 </div>
-
-<style>
-	.message{
-		word-break: break-all;
-	}
-	.message-body {
-		background-color: var(--background) !important;
-		color: var(--brandColor) !important;
-	}
-	.message-header {
-		background-color: var(--brandColor) !important;
-	}
-</style>

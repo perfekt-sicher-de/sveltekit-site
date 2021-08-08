@@ -44,12 +44,6 @@ foreach(new RecursiveIteratorIterator($it) as $file) {
             //print "$file: $hash:\n$js\n";
             $list[$hash] = $file;
         }
-
-        preg_match_all('#<link rel="modulepreload" href="([^>"]+)">#si', $content, $matches);
-        //$content = preg_replace('#<link rel="modulepreload" href="([^>]+)">#si','',$content);
-        foreach ($matches[1] as $resource) {
-            //Header add Link "</css/styles.css>; rel=preload; as=style"
-        }
     }
 }
 $hashes = array_keys($list);

@@ -1,4 +1,6 @@
 import path from 'path';
+import autoImport from 'vite-plugin-autoimport';
+import { minifyHtml } from 'vite-plugin-html';
 import nadapter from '@sveltejs/adapter-node';
 import sadapter from '@sveltejs/adapter-static';
 let adapter;
@@ -20,6 +22,12 @@ export default {
 	kit: {
 		adapter: adapter,
 		vite: {
+			plugins: [
+				autoImport({
+					components: ['./src/components'],
+				}),
+				minifyHtml()
+			],
 			resolve: {
 				alias: {
 					$components: path.resolve('./src/components'),
