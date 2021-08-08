@@ -2,7 +2,6 @@
 	import { goto } from '$app/navigation';
 	import { fade } from 'svelte/transition';
 	import categories from '../categories';
-	import Category from '$components/Category.svelte';
 	let antivirus = categories['antivirus'];
 </script>
 

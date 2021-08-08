@@ -34,43 +34,62 @@ const categories = {
     av_sophos: {
         title: "Sophos",
         subtitle: "Sophos Antivirus",
-        exturl: "https://www.sophos.com"
+        exturl: "https://www.sophos.com",
+        parents: ["antivirus"]
     },
     av_kaspersky: {
         title: "Kaspersky",
-        subtitle: ""
+        subtitle: "",
+        exturl: "https://www.kaspersky.de/small-to-medium-business-security/downloads/endpoint",
+        parents: ["antivirus"]
     },
     av_norton: {
         title: "Norton",
-        subtitle: ""
+        subtitle: "",
+        exturl: "https://de.norton.com/antivirus?inid=nortoncom_nav_antivirus_internetsecurity:internetsecurity-malware-ransomware-5-dos-and-donts",
+        parents: ["antivirus"]
     },
     av_avira: {
         title: "Avira",
-        subtitle: ""
+        subtitle: "Ideal für Firmen mit sehr kleinem Budget und um die 5 Mitarbeitern",
+        exturl: "https://www.avira.com/de",
+        parents: ["antivirus"]
     },
     av_mcafee: {
         title: "Mc Afee",
-        subtitle: ""
+        subtitle: "",
+        exturl: "https://www.mcafee.com/enterprise/de-de/home.html",
+        parents: ["antivirus"]
     },
     av_scanguard: {
         title: "ScanGuard",
-        subtitle: ""
+        subtitle: "Für Privatanwender und Selbstständige",
+        exturl: "https://www.scanguard.com/software",
+        parents: ["antivirus"]
     },
     av_avast: {
         title: "Avast",
-        subtitle: ""
+        exturl: "https://www.avast.com/de-de/business/",
+        subtitle: "Lösungen für Unternehmen",
+        parents: ["antivirus"]
     },
     av_eset: {
         title: "eset",
-        subtitle: ""
+        exturl: "https://www.eset.com/de/business/complete-protection-bundle/",
+        subtitle: "ESET PROTECT Complete",
+        parents: ["antivirus"]
     },
     av_bitdefender: {
         title: "Bitdefender",
-        subtitle: ""
+        subtitle: "30 Tage testen",
+        exturl: "https://www.bitdefender.de/business/",
+        parents: ["antivirus"]
     },
     av_avg: {
         title: "AVG",
-        subtitle: ""
+        subtitle: "",
+        exturl: "https://www.avg.com/de-de/antivirus-business-edition",
+        parents: ["antivirus"]
     }
 };
 export default categories;
