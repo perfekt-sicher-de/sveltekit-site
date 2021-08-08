@@ -25,8 +25,8 @@ export default {
 			plugins: [
 				autoImport({
 					components: ['./src/components'],
-				})
-//				minifyHtml(),
+				}),
+				minifyHtml()
 			],
 			resolve: {
 				alias: {
