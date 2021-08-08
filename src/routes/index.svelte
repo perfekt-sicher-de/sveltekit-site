@@ -1,6 +1,5 @@
 <script>
 	import { goto } from '$app/navigation';
-	import Category from '$components/Category.svelte';
 	import { fade } from 'svelte/transition';
 	import stringResources from '../stringResources';
 	let showAlert = false;
