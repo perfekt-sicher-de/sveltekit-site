@@ -22,7 +22,7 @@ export default {
 		adapter: adapter,
 		vite: {
 			plugins: [
-				minifyHtml(),
+//				minifyHtml(),
 			],
 			resolve: {
 				alias: {

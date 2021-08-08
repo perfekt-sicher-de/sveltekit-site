@@ -1,11 +1,6 @@
 <?php
 
 
-//passthru("svelte-kit build");
-$min = false;
-if ($min) {
-     passthru("html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --use-short-doctype --minify-css true --input-dir build --output-dir build  --file-ext html");
-}
 $firebase = json_decode(file_get_contents(__DIR__.'/firebase.json'), true);
 $headersSection = &$firebase['hosting']['headers'];
 $cspHeaderLocation = &$headersSection[0]['headers'];
@@ -43,12 +38,6 @@ foreach(new RecursiveIteratorIterator($it) as $file) {
             $hash = "sha256-" . base64_encode(hash('sha256', $js, true));
             //print "$file: $hash:\n$js\n";
             $list[$hash] = $file;
-        }
-
-        preg_match_all('#<link rel="modulepreload" href="([^>"]+)">#si', $content, $matches);
-        //$content = preg_replace('#<link rel="modulepreload" href="([^>]+)">#si','',$content);
-        foreach ($matches[1] as $resource) {
-            //Header add Link "</css/styles.css>; rel=preload; as=style"
         }
     }
 }
