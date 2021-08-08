@@ -46,16 +46,16 @@
 		</div>
 	</div>
 	<div class="tile is-ancestor">
-		<Category id="antivirus"/>
-		<Category id="firewall"/>
-		<Category id="waf" />
-		<Category id="ast" />
+		<CategoryTile id="antivirus"/>
+		<CategoryTile id="firewall"/>
+		<CategoryTile id="waf" />
+		<CategoryTile id="ast" />
 	</div>
 	<div class="tile is-ancestor">
-		<Category id="handsOn" />
-		<Category id="secDev" />
-		<Category id="siem" />
-		<Category id="penTest" />
+		<CategoryTile id="handsOn" />
+		<CategoryTile id="secDev" />
+		<CategoryTile id="siem" />
+		<CategoryTile id="penTest" />
 	</div>
 </div>
 

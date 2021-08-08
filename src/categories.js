@@ -90,6 +90,12 @@ const categories = {
         subtitle: "",
         exturl: "https://www.avg.com/de-de/antivirus-business-edition",
         parents: ["antivirus"]
+    },
+    waf_cloudflare: {
+        title: "Cloudflare",
+        subtitle: "",
+        exturl: "https://www.cloudflare.com/",
+        parents: ["waf"]
     }
 };
 export default categories;
