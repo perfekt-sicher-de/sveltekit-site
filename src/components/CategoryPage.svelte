@@ -29,8 +29,8 @@
 <div in:fade>
 	<h1 class="title m-4">{page.title}</h1>
 	<h2 class="subtitle m-4">{page.subtitle}</h2>
-	<div class="notification is-danger" in:fade>
-		Diese Seite befindet sich im Aufbau, in Kürze stelle ich hier mehr Funktionen und Informationen für SIe bereit
+	<div class="notification is-info" in:fade>
+		Diese Seite befindet sich im Aufbau, weiter Funktionen und Informationen folgen fast täglich.
 	</div>
 	{#each rows as list}
 		<div class="tile is-ancestor">

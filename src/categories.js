@@ -1,43 +1,58 @@
 const categories = {
     antivirus: {
         title: "Antivirus",
-        subtitle: "Maleware und Spam Schutz"
+        subtitle: "Maleware und Spam Schutz",
+        parents: ["root"]
     },
     firewall: {
         title: "Firewall",
-        subtitle: ""
+        subtitle: "",
+        parents: ["root"]
     },
     waf: {
         title: "WAF",
-        subtitle: "Web Application Firewall"
+        subtitle: "Web Application Firewall",
+        parents: ["root"]
     },
     ast: {
         title: "AST",
-        subtitle: "Application Security Testing (SAST, DAST, IAST, SCA)"
+        subtitle: "Application Security Testing (SAST, DAST, IAST, SCA)",
+        parents: ["root"]
     },
     handsOn: {
         title: "Hands On",
-        subtitle: "Hardening und absichern"
+        subtitle: "Hardening und absichern",
+        parents: ["root"]
     },
     secDev: {
         title: "Sec-Dev",
-        subtitle: "Entwicklung von sicheren Anwendungen"
+        subtitle: "Entwicklung von sicheren Anwendungen",
+        parents: ["root"]
     },
     siem: {
         title: "SIEM",
-        subtitle: "Security Incident Event Managment"
+        subtitle: "Security Incident Event Managment",
+        parents: ["root"]
     },
     penTest: {
         title: "PEN-Test",
-        subtitle: "Security Checks nach Maß"
+        subtitle: "Security Checks nach Maß",
+        parents: ["root"]
     },
     securityincident: {
         title: "security incident",
-        subtitel: "Kontakte im Ernstfall"
+        subtitle: "Im Ernstfall gibt es hier Hilfe",
+        parents: ["root"]
     },
     si_dgc: {
         title: "DGC",
-        exturl: "https://dgc.org/contact"
+        subtitle: "Deutsche Gesellschaft für Cybersicherheit",
+        exturl: "https://dgc.org/contact",
+        parents: ["securityincident"]
+    },
+    root: {
+        title: "Alle Security Produkte und Dienstleistungen",
+        subtitle: "Alles vom Antivirus-Programm bis zur forensischen Untersuchung im Schadensfall"
     },
     av_sophos: {
         title: "Sophos",

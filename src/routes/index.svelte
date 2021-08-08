@@ -13,10 +13,6 @@
 	}
 </script>
 
-<svelte:head>
-	<title>{stringResources.indexPage.titleTag} - {stringResources.appName}</title>
-</svelte:head>
-
 {#if showAlert}
 	<div class="notification is-danger" in:fade>
 		<button class="delete" on:click={() => (showAlert = false)} />
@@ -26,7 +22,7 @@
 
 <div in:fade>
 	<h1 class="title m-4">{stringResources.appName}</h1>
-	<h2 class="subtitle m-4">{stringResources.indexPage.homeTagLine}</h2>
+	<h2 class="subtitle m-4">{stringResources.indexPage.title}</h2>
 	<div class="subtitle m-4">
 		{stringResources.indexPage.aboutText}
 	</div>
@@ -45,17 +41,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="tile is-ancestor">
-		<CategoryTile id="antivirus"/>
-		<CategoryTile id="firewall"/>
-		<CategoryTile id="waf" />
-		<CategoryTile id="ast" />
-	</div>
-	<div class="tile is-ancestor">
-		<CategoryTile id="handsOn" />
-		<CategoryTile id="secDev" />
-		<CategoryTile id="siem" />
-		<CategoryTile id="penTest" />
-	</div>
+
+	<CategoryPage id="root"/>
 </div>
 
+<svelte:head>
+	<title>{stringResources.appName} - {stringResources.indexPage.title}</title>
+</svelte:head>
