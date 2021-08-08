@@ -13,7 +13,7 @@
                 "headers": [
                     {
                         "key": "content-security-policy",
-                        "value": "default-src 'self'; connect-src https:\/\/xn--it-sicherheit-fr-unternehmen-g7c.de\/; img-src 'self' data:; script-src 'self' 'unsafe-hashes'; style-src 'self' 'unsafe-hashes' 'unsafe-inline' "
+                        "value": "default-src 'self'; connect-src https:\/\/xn--it-sicherheit-fr-unternehmen-g7c.de\/; img-src 'self' data:; script-src 'self' 'unsafe-hashes' 'unsafe-inline'; style-src 'self' 'unsafe-hashes' 'unsafe-inline' "
                     },
                     {
                         "key": "cache-control",
