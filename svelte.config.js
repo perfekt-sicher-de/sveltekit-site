@@ -28,6 +28,11 @@ export default {
 				}),
 				minifyHtml()
 			],
+			build: {
+				rollupOptions: {
+					treeshake: true
+				}
+			},
 			resolve: {
 				alias: {
 					$components: path.resolve('./src/components'),
