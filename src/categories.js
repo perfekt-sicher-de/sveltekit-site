@@ -31,6 +31,14 @@ const categories = {
         title: "PEN-Test",
         subtitle: "Security Checks nach Maß"
     },
+    securityincident: {
+        title: "security incident",
+        subtitel: "Kontakte im Ernstfall"
+    },
+    si_dgc: {
+        title: "DGC",
+        exturl: "https://dgc.org/contact"
+    },
     av_sophos: {
         title: "Sophos",
         subtitle: "Sophos Antivirus",
