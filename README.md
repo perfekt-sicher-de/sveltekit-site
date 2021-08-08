@@ -16,9 +16,9 @@ Everyone can check the code, report issues, add suggestions and contribute.
 
 # how to build / test
 
-to create the optimized build which minimizes CSS/HTML/JS and extract security information run: 
+to create the optimized build which minimizes CSS/HTML/JS run: 
 
-- php extract-hashes.php
+- npm run build
 - firebase serve
 
 # Contributens are welcome
