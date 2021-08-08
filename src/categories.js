@@ -34,8 +34,7 @@ const categories = {
     av_sophos: {
         title: "Sophos",
         subtitle: "Sophos Antivirus",
-        exturl: "https://www.sophos.com",
-        image: "sophos-logo.svg"
+        exturl: "https://www.sophos.com"
     },
     av_kaspersky: {
         title: "Kaspersky",
