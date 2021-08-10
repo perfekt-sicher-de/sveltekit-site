@@ -1,10 +1,13 @@
 {
-  cloudflare_waf: {
+  "cloudflare_waf": {
      "title": "Cloudflare WAF",
      "variants": {
          "pro": {
               "features": [
-                  "owasp"
+                  "OWASP Regelset",
+                  "Cloudflare Regelset",
+                  "Eine Regeln"
+                  "ModSecurity Regelset"
               ]
           },
          "business":{
