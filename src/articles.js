@@ -1,4 +1,4 @@
-{
+const articles = {
   "cloudflare_waf": {
      "title": "Cloudflare WAF",
      "categories" : ["waf_cloudflare"],
@@ -35,4 +35,5 @@
          }
      }
   }
-}
+};
+export default articles;
