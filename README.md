@@ -11,6 +11,11 @@ Everyone can check the code, report issues, add suggestions and contribute.
 
 # How to start developing
 
+Fork the project on github and do a git clone of your repository.
+
+Make sure node v14 and npm v7 is installed (v6 does not work)
+and run the following commands:
+
 - npm install
 - npm run dev
 
