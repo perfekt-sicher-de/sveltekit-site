@@ -26,6 +26,18 @@ to create the optimized build which minimizes CSS/HTML/JS run:
 - npm run build
 - firebase serve
 
+when you feature is ready create a pull request and wait some seconds for github to run the deployment.
+it will add a link to you merge request where the result of you work will be visible.
+
+# Can I get payed for my contribution?
+
+yes you can sent me offers.
+
+# Can I use the code for other projects
+
+yes with some restrictions, there is a strong copy left enforced by the license please read the license.
+
+
 # Contributens are welcome
 
 you miss a product or feature just open a issue
