@@ -20,7 +20,9 @@
     "eslint-plugin-svelte3": "^3.2.0",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
+    "svelma": "^0.4.5",
     "svelte": "^3.34.0",
+    "svelte-fa": "^2.2.1",
     "vite-plugin-autoimport": "^1.4.0",
     "vite-plugin-html": "^2.0.7"
   },
@@ -31,8 +33,6 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "html-minifier": "^4.0.0",
-    "svelma": "^0.4.5",
-    "svelte-fa": "^2.2.1",
     "svelte-speedometer": "^1.1.0"
   }
 }
