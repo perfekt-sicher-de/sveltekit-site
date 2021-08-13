@@ -14,6 +14,7 @@
     "@sveltejs/adapter-node": "next",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
+    "bulma": "^0.9.3",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",
@@ -29,7 +30,6 @@
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "bulma": "^0.9.3",
     "html-minifier": "^4.0.0",
     "svelma": "^0.4.5",
     "svelte-fa": "^2.2.1",
