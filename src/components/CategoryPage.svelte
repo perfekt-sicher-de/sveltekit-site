@@ -26,18 +26,26 @@
 	<title>{page.title} - {page.subtitle}</title>
 </svelte:head>
 
-<div in:fade>
-	<h1 class="title m-4">{page.title}</h1>
-	<h2 class="subtitle m-4">{page.subtitle}</h2>
-	<div class="notification is-info" in:fade>
-		Diese Seite befindet sich im Aufbau, weiter Funktionen und Informationen folgen fast täglich.
+<section class="hero is-primary">
+	<div class="hero-body">
+		<p class="title">
+			{page.title}
+		</p>
+		<p class="subtitle">
+			{page.subtitle}
+		</p>
 	</div>
-	{#each rows as list}
-		<div class="tile is-ancestor">
-		{#each list as catId, i}
-			<CategoryTile id={catId} />
-		{/each}
-		</div>
-	{/each}
-</div>
+</section>
 
+
+{#each rows as list}
+	<div class="tile is-ancestor">
+	{#each list as catId, i}
+		<CategoryTile id={catId} />
+	{/each}
+	</div>
+{/each}
+
+<div class="notification is-info" in:fade>
+	Diese Seite befindet sich im Aufbau, weiter Funktionen und Informationen folgen fast täglich.
+</div>

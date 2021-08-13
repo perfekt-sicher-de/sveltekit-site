@@ -4,17 +4,21 @@
 	--brandColor: hsl(187, 95%, 40%);
 	--textDark: hsl(0, 0%, 0%);
 	--textLight: hsl(0, 4%, 20%);
-	--background: hsl(0, 0%, 100%);
-	--backgroundLight: hsl(0, 0%, 90%);
+	--background: #fff;
+	--backgroundLight: #888;
 }
 html,
 body,
 main {
-	background-color: var(--backgroundLight) !important;
+	background-color: var(--background) !important;
 }
 
-.box {
-	background-color: var(--background) !important;
+html {
+	font-size: 27px !important;
+}
+
+.hero-body {
+	height: 20em;
 }
 
 .register {

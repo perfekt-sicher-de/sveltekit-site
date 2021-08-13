@@ -18,8 +18,8 @@
 <svelte:head>
 	<title>{stringResources.profilePage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
-<div class="columns" in:fade>
-	<div class="column is-half is-offset-3">
+<div class="box">
+	<div>
 		<h1 class="title m-4">{stringResources.profilePage.mainTitleLine}</h1>
 		<h2 class="subtitle m-4">{stringResources.profilePage.mainSubtitle}</h2>
 		<div class="box">
@@ -38,7 +38,7 @@
 		</div>
 		<h3>{stringResources.profilePage.afterRangeText}</h3>
 		<br />
-		<button class="button mt-4 is-success is-outlined is-small" on:click={gotoNext}>
+		<button class="button mt-4 is-success is-small" on:click={gotoNext}>
 			<span>{stringResources.profilePage.btnText}</span>
 			<span class="icon is-medium">
 				<i class="fas fa-check" />

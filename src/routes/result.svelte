@@ -61,53 +61,70 @@
 			</div>
 		</div>
 	{:else}
-		<h1 class="title m-4" in:fade>{stringResources.resultPage.resultTitle}</h1>
-		<h2 class="subtitle m-4" in:fade>{url}</h2>
-		<Speedometer
-				value={score}
-				segments={3}
-				maxValue={100}
-				height={200}
-				segmentColors={["#f03e3e","#ffdd00","#30b32d"]}
-				ringWidth={25}
-				customSegmentStops={[0,40,70,100]}
-				needleTransitionDuration={4000}
-				needleTransition="easeElastic"
-				labelFontSize={"10px"}
-				valueTextFontSize={"10px"}
+
+		<section class="hero is-primary">
+			<div class="hero-title m-4">
+				<h1 class="title">{stringResources.resultPage.resultTitle}</h1>
+			</div>
+			<div class="hero-body" style="height:800px">
+				<p class="subtitle">
+					{url}
+				</p>
+				<div class="box">
+					<div class="container" style="width:300px">
+						<Speedometer
+
+								value={score}
+								segments={3}
+								maxValue={100}
+								height={200}
+								segmentColors={["#f03e3e","#ffdd00","#30b32d"]}
+								ringWidth={25}
+								customSegmentStops={[0,40,70,100]}
+								needleTransitionDuration={4000}
+								needleTransition="easeElastic"
+								labelFontSize={"10px"}
+								valueTextFontSize={"10px"}
 
 
-		/>
-		<div class="field has-addons columns is-8" in:fade>
-			<p class="control">
-				<button class="button is-small" style="background-color:#F03E3E;color:white;">
-					<span>{stringResources.resultPage.badTagText}</span>
-				</button>
-			</p>
-			<p class="control">
-				<button class="button is-small" style="background-color:#FFDD00;">
-					<span>{stringResources.resultPage.normalTagText}</span>
-				</button>
-			</p>
-			<p class="control">
-				<button class="button is-small" style="background-color:#30B32D;color:white;">
-					<span>{stringResources.resultPage.goodTagText}</span>
-				</button>
-			</p>
-		</div>
-		<br />
-		<button class="button m-4 is-success is-outlined is-small" in:fade on:click={handleNext}>
-			<span> {stringResources.resultPage.profileBtnText}</span>
-			<span class="icon is-medium">
-				<i class="fas fa-check" />
-			</span>
-		</button>
-		<button class="button m-4 is-danger is-outlined is-small" in:fade on:click={handleBack}>
-			<span> {stringResources.resultPage.backBtnText}</span>
-			<span class="icon is-medium">
-				<i class="fas fa-times" />
-			</span>
-		</button>
+						/>
+						<div class="field has-addons" in:fade>
+							<p class="control">
+								<button class="button is-small" style="background-color:#F03E3E;color:white;">
+									<span>{stringResources.resultPage.badTagText}</span>
+								</button>
+							</p>
+							<p class="control">
+								<button class="button is-small" style="background-color:#FFDD00;">
+									<span>{stringResources.resultPage.normalTagText}</span>
+								</button>
+							</p>
+							<p class="control">
+								<button class="button is-small" style="background-color:#30B32D;color:white;">
+									<span>{stringResources.resultPage.goodTagText}</span>
+								</button>
+							</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="container">
+					<button class="button m-4 is-success is-small" in:fade on:click={handleNext}>
+						<span> {stringResources.resultPage.profileBtnText}</span>
+						<span class="icon is-medium">
+								<i class="fas fa-check" />
+							</span>
+					</button>
+					<button class="button m-4 is-danger  is-small" in:fade on:click={handleBack}>
+						<span> {stringResources.resultPage.backBtnText}</span>
+						<span class="icon is-medium">
+								<i class="fas fa-times" />
+							</span>
+					</button>
+				</div>
+			</div>
+		</section>
+
 	{/if}
 {/if}
 
