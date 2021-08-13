@@ -21,18 +21,16 @@
     "prettier-plugin-svelte": "^2.2.0",
     "svelte": "^3.34.0",
     "vite-plugin-autoimport": "^1.4.0",
-    "vite-plugin-html": "^2.0.7"
-  },
-  "type": "module",
-  "engines": {
-    "node": ">= 12.17.0"
-  },
-  "dependencies": {
+    "vite-plugin-html": "^2.0.7",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "bulma": "^0.9.3",
     "html-minifier": "^4.0.0",
     "svelma": "^0.4.5",
     "svelte-fa": "^2.2.1",
     "svelte-speedometer": "^1.1.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">= 12.17.0"
   }
 }
