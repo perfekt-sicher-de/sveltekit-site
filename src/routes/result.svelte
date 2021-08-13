@@ -1,19 +1,9 @@
-<script context="module">
-	export async function load({ page }) {
-		let url = page.query.get('url');
-		return {
-			props: {
-				url: url
-			}
-		};
-	}
-</script>
-
 <script>
-	export let url;
+
 	let isLoading = true;
 	let showAlert = false;
 	let score = 0;
+	let url = '...';
 	import { onMount, tick } from 'svelte';
 	import stringResources from '../stringResources';
 	import { goto } from '$app/navigation';
@@ -28,6 +18,8 @@
 
 	async function GetResults() {
 		try {
+			const urlParams = new URLSearchParams(window.location.search);
+			url = urlParams.get('url');
 			let response = await GetWebsiteSecurityScore(url);
 			if (response == null || !response.hasOwnProperty("score")) {
 				throw 'No data found';
