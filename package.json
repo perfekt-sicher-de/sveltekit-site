@@ -11,28 +11,26 @@
     "start": " npm run build && node build/index.js"
   },
   "devDependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@sveltejs/adapter-node": "next",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
+    "bulma": "^0.9.3",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",
+    "html-minifier": "^4.0.0",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
+    "svelma": "^0.4.5",
     "svelte": "^3.34.0",
+    "svelte-fa": "^2.2.1",
+    "svelte-speedometer": "^1.1.0",
     "vite-plugin-autoimport": "^1.4.0",
     "vite-plugin-html": "^2.0.7"
   },
   "type": "module",
   "engines": {
     "node": ">= 12.17.0"
-  },
-  "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "bulma": "^0.9.3",
-    "html-minifier": "^4.0.0",
-    "svelma": "^0.4.5",
-    "svelte-fa": "^2.2.1",
-    "svelte-speedometer": "^1.1.0"
   }
 }
