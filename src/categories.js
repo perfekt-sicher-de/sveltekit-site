@@ -10,6 +10,18 @@ const categories = {
         subtitle: "",
         parents: ["root"]
     },
+    fire_securepoint: {
+        exturl: "https://www.securepoint.de/produkte/utm-firewalls.html",
+        title: "securepoint utm firewall",
+        subtitle: "utm firewall",
+        parents: ["firewall"]
+    },
+    fire_sophos: {
+        exturl: "https://www.sophos.com/de-de/products/next-gen-firewall/tech-specs.aspx?utm_campaign=keywan&utm_soure=keywan",
+        title: "sophos",
+        subtitle: "sophos next gen firewalls",
+        parents: ["firewall"]
+    },
     waf: {
         title: "WAF",
         subtitle: "Web Application Firewall",
