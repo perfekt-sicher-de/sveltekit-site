@@ -20,7 +20,7 @@ const stringResources = {
         badTagText: "Bad",
         normalTagText: "Normal",
         goodTagText: "Good",
-        profileBtnText: "Absichern und weiter Testen lassen durch Profies",
+        profileBtnText: "Unterstützung von Profies einholen",
         backBtnText: "Kostenlos selber weiter Testen",
         noDataError:"Couldn't get data for this url."
     },

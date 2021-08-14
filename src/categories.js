@@ -19,6 +19,12 @@ const categories = {
         subtitle: "Application Security Testing (SAST, DAST, IAST, SCA)",
         parents: ["root"]
     },
+    ast_probely: {
+        title: "probely",
+        subtitle: "Static And Dynamic Application Security Testing",
+        exturl: "https://probely.com/?utm_medium=affiliate&utm_source=partner&utm_campaign=keywan",
+        parents: ["ast"]
+    },
     handsOn: {
         title: "Hands On",
         subtitle: "Hardening und absichern",

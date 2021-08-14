@@ -1,6 +1,6 @@
 import path from 'path';
 import autoImport from 'vite-plugin-autoimport';
-import { minifyHtml } from 'vite-plugin-html';
+//import { minifyHtml } from 'vite-plugin-html';
 import nadapter from '@sveltejs/adapter-node';
 import sadapter from '@sveltejs/adapter-static';
 let adapter;
@@ -26,7 +26,7 @@ export default {
 				autoImport({
 					components: ['./src/components'],
 				}),
-				minifyHtml()
+//				minifyHtml() -> it does somehow not work
 			],
 			build: {
 				rollupOptions: {

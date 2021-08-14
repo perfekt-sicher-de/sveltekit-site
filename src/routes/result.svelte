@@ -34,7 +34,7 @@
 		}
 	}
 	async function handleNext() {
-		await goto('/profile');
+		await goto('/contact');
 	}
 	async function handleBack() {
 		await goto('/analysis');
@@ -48,9 +48,6 @@
 	<title>{stringResources.resultPage.titleTag} - {url} - {stringResources.appName}</title>
 </svelte:head>
 
-{#if isLoading}
-	<Loader />
-{:else}
 	{#if showAlert}
 		<div class="columns m-4">
 			<div class=" column is-half is-offset-3 p-4">
@@ -66,68 +63,71 @@
 			<div class="hero-title m-4">
 				<h1 class="title">{stringResources.resultPage.resultTitle}</h1>
 			</div>
-			<div class="hero-body" style="height:800px">
+			<div class="hero-body">
 				<p class="subtitle">
 					{url}
 				</p>
-				<div class="box">
-					<div class="container" style="width:300px">
-						<Speedometer
+			</div>
+		</section>
+		{#if isLoading}
+			<Loader />
+		{:else}
+			<div class="box">
+				<div class="container" style="width:300px">
+					<Speedometer
 
-								value={score}
-								segments={3}
-								maxValue={100}
-								height={200}
-								segmentColors={["#f03e3e","#ffdd00","#30b32d"]}
-								ringWidth={25}
-								customSegmentStops={[0,40,70,100]}
-								needleTransitionDuration={4000}
-								needleTransition="easeElastic"
-								labelFontSize={"10px"}
-								valueTextFontSize={"10px"}
+							value={score}
+							segments={3}
+							maxValue={100}
+							height={200}
+							segmentColors={["#f03e3e","#ffdd00","#30b32d"]}
+							ringWidth={25}
+							customSegmentStops={[0,40,70,100]}
+							needleTransitionDuration={4000}
+							needleTransition="easeElastic"
+							labelFontSize={"10px"}
+							valueTextFontSize={"10px"}
 
 
-						/>
-						<div class="field has-addons" in:fade>
-							<p class="control">
-								<button class="button is-small" style="background-color:#F03E3E;color:white;">
-									<span>{stringResources.resultPage.badTagText}</span>
-								</button>
-							</p>
-							<p class="control">
-								<button class="button is-small" style="background-color:#FFDD00;">
-									<span>{stringResources.resultPage.normalTagText}</span>
-								</button>
-							</p>
-							<p class="control">
-								<button class="button is-small" style="background-color:#30B32D;color:white;">
-									<span>{stringResources.resultPage.goodTagText}</span>
-								</button>
-							</p>
-						</div>
+					/>
+					<div class="field has-addons" in:fade>
+						<p class="control">
+							<button class="button is-small" style="background-color:#F03E3E;color:white;">
+								<span>{stringResources.resultPage.badTagText}</span>
+							</button>
+						</p>
+						<p class="control">
+							<button class="button is-small" style="background-color:#FFDD00;">
+								<span>{stringResources.resultPage.normalTagText}</span>
+							</button>
+						</p>
+						<p class="control">
+							<button class="button is-small" style="background-color:#30B32D;color:white;">
+								<span>{stringResources.resultPage.goodTagText}</span>
+							</button>
+						</p>
 					</div>
 
 				</div>
-				<div class="container">
-					<button class="button m-4 is-success is-small" in:fade on:click={handleNext}>
-						<span> {stringResources.resultPage.profileBtnText}</span>
-						<span class="icon is-medium">
-								<i class="fas fa-check" />
-							</span>
-					</button>
-					<button class="button m-4 is-danger  is-small" in:fade on:click={handleBack}>
-						<span> {stringResources.resultPage.backBtnText}</span>
-						<span class="icon is-medium">
-								<i class="fas fa-times" />
-							</span>
-					</button>
-				</div>
+
 			</div>
-		</section>
+		{/if}
 
 	{/if}
-{/if}
+<div class="box">
+	<div>
+		<h3>{stringResources.profilePage.afterRangeText}</h3>
+		<br />
+		<button class="button mt-4 is-success is-small" on:click={handleNext}>
+			<span>{stringResources.profilePage.btnText}</span>
+			<span class="icon is-medium">
+				<i class="fas fa-check" />
+			</span>
+		</button>
+	</div>
+</div>
 
+<CategoryPage id="ast"/>
 <style>
 	.has-addons {
 		justify-content: center !important;
@@ -137,8 +137,5 @@
 	}
 	.control .button:hover {
 		border: none;
-	}
-	h2 {
-		color: var(--brandColor);
 	}
 </style>
