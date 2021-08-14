@@ -36,7 +36,7 @@
 		<h2 class="title">{stringResources.indexPage.scanHeadline}</h2>
 		<progress class="progress is-small is-primary" max="100">15%</progress>
 		<h2 class="subtitle">{stringResources.indexPage.scanText}</h2>
-		<div class="columns">
+		<div class="container">
 			<input
 					class="input mt-2"
 					id="url"
