@@ -50,7 +50,7 @@
 	</div>
 </section>
 
-<div class="box">
+<div class="container">
 	<CategoryPage id="root"/>
 </div>
 <svelte:head>
