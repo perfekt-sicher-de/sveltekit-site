@@ -25,6 +25,11 @@ const categories = {
         exturl: "https://probely.com/?utm_medium=affiliate&utm_source=partner&utm_campaign=keywan",
         parents: ["ast"]
     },
+    ast_forty: {
+        title: "forty webinspect",
+        subtitle : "Dynamic Application Security Testing",
+        exturl: "https://www.microfocus.com/de-de/products/webinspect-dynamic-analysis-dast/overview"
+    },
     handsOn: {
         title: "Hands On",
         subtitle: "Hardening und absichern",
