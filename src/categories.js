@@ -1,3 +1,4 @@
+"use strict";
 const categories = {
     antivirus: {
         title: "Antivirus",
@@ -32,8 +33,14 @@ const categories = {
         parents: ["ast"]
     },
     ast_sonar: {
-        exturl: "https://sonarcloud.io/project/configuration?analysisMode=GitHubAutoScan&id=my-security-check-com_sveltekit-site",
+        exturl: "https://sonarcloud.io",
         title: "Sonarcloud Scanner",
+        subtitle : "Static Application Security Testing and Code Quality",
+        parents: ["ast"]
+    },
+    ast_deepsource: {
+        exturl: "https://deepsource.io",
+        title: "Deepsource Scanner",
         subtitle : "Static Application Security Testing and Code Quality",
         parents: ["ast"]
     },
