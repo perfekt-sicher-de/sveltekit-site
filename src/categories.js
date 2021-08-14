@@ -20,15 +20,21 @@ const categories = {
         parents: ["root"]
     },
     ast_probely: {
-        title: "probely",
+        title: "Probely",
         subtitle: "Static And Dynamic Application Security Testing",
         exturl: "https://probely.com/?utm_medium=affiliate&utm_source=partner&utm_campaign=keywan",
         parents: ["ast"]
     },
     ast_forty: {
-        title: "forty webinspect",
+        title: "Forty Webinspect",
         subtitle : "Dynamic Application Security Testing",
         exturl: "https://www.microfocus.com/de-de/products/webinspect-dynamic-analysis-dast/overview",
+        parents: ["ast"]
+    },
+    ast_sonar: {
+        exturl: "https://sonarcloud.io/project/configuration?analysisMode=GitHubAutoScan&id=my-security-check-com_sveltekit-site",
+        title: "Sonarcloud Scanner",
+        subtitle : "Static Application Security Testing and Code Quality",
         parents: ["ast"]
     },
     handsOn: {
