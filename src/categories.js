@@ -35,7 +35,6 @@ const categories = {
         exturl: "https://sonarcloud.io/project/configuration?analysisMode=GitHubAutoScan&id=my-security-check-com_sveltekit-site",
         title: "Sonarcloud Scanner",
         subtitle : "Static Application Security Testing and Code Quality",
-        exturl: "https://www.microfocus.com/de-de/products/webinspect-dynamic-analysis-dast/overview",
         parents: ["ast"]
     },
     handsOn: {
