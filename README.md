@@ -16,10 +16,8 @@ More information about forking you will find here:
 https://docs.github.com/en/get-started/quickstart/fork-a-repo
 
 2. clone your new fork with git
-see
-https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository
 
-3. Make sure node v14 and npm v7 is installed (v6 does not work)
+3. Make sure node v14 and npm v7 is installed
 and run the following commands:
 
 - npm install
