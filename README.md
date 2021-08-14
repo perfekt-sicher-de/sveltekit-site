@@ -37,7 +37,8 @@ it will add a link to you merge request where the result of you work will be vis
 
 # Can I get payed for my contribution?
 
-yes you can sent me offers.
+yes you can sent me offers. Please fork the project (see "how to start developing above) before starting any offer.
+
 
 # Can I use the code for other projects
 
