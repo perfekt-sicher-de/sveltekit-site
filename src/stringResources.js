@@ -1,9 +1,11 @@
+"use strict";
 const stringResources = {
     appName: "my-security-check.com",
     menu: {
         firtsBtnText: "Home",
         secondBtnText: "Impressum",
-        thirdBtnText: "Datenschutz"
+        thirdBtnText: "Datenschutz",
+        underAttack: "Under Attack?"
     },
     indexPage: {
         title: "",

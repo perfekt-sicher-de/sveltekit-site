@@ -1,116 +1,141 @@
 <script>
-	import { onMount } from 'svelte';
 	import Fa from 'svelte-fa/src/fa.svelte';
-	import { faInfo } from '@fortawesome/free-solid-svg-icons'
-	import { faLock } from '@fortawesome/free-solid-svg-icons'
-	import { faHome } from '@fortawesome/free-solid-svg-icons'
-
-	import { goto } from '$app/navigation';
+	import { faInfo, faLock, faHome, faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 	import stringResources from '../stringResources';
-	onMount(() => {});
-	async function gotoHome() {
-		await goto('/');
-		closeNav();
-	}
-	async function gotoImpressum() {
-		await goto('/impressum');
-		closeNav();
-	}
-	async function gotoDatenschutz() {
-		await goto('/datenschutz');
-		closeNav();
-	}
-	function openNav() {
-		let x = window.matchMedia('(min-width: 450px)');
-		if (x.matches) {
-			document.getElementById('myNav').style.width = '25%';
-		} else {
-			document.getElementById('myNav').style.width = '100%';
-		}
-	}
 
-	function closeNav() {
-		document.getElementById('myNav').style.width = '0%';
+	let opened = false;
+
+	function handleClick(event) {
+		const target = event.target;
+		if (target.tagName === 'A') {
+			opened = false;
+		}
 	}
 </script>
 
-<div id="myNav" class="overlay">
-	<h1 href="javascript:void(0)" class="closebtn" on:click={closeNav}>&times;</h1>
-	<div class="overlay-content">
-		<div class="columns m-4">
-			<div class=" column is-half p-4">
-					<button class="button m-4 is-block" on:click={gotoHome}>
-						<span class="icon">
-							<Fa icon={faHome} />
-						</span>
-						<span>{stringResources.menu.firtsBtnText}</span>
-					</button>
-					<button class="button m-4 is-block" on:click={gotoImpressum}>
-						<span class="icon">
-							<Fa icon={faInfo} />
-						</span>
-						<span>{stringResources.menu.secondBtnText}</span>
-					</button>
-					<button class="button m-4 is-block" on:click={gotoDatenschutz}>
-						<span class="icon">
-							<Fa icon={faLock} />
-						</span>
-						<span>{stringResources.menu.thirdBtnText}</span>
-					</button>
-			</div>
+<div class="navbar">
+	<div class="sidebar" class:opened>
+		<button class="close-btn" on:click={() => (opened = false)}>&times;</button>
+		<div class="overlay-content" on:click={handleClick}>
+			<a href="/" class="navitem button m-4 is-block">
+				<span class="icon">
+					<Fa icon={faHome} />
+				</span>
+				<span>{stringResources.menu.firtsBtnText}</span>
+			</a>
+			<a href="/impressum" class="navitem button m-4 is-block">
+				<span class="icon">
+					<Fa icon={faInfo} />
+				</span>
+				<span>{stringResources.menu.secondBtnText}</span>
+			</a>
+			<a href="/datenschutz" class="navitem button m-4 is-block">
+				<span class="icon">
+					<Fa icon={faLock} />
+				</span>
+				<span>{stringResources.menu.thirdBtnText}</span>
+			</a>
+			<a href="/securityincident" class="navitem button m-4 under-attack-mobile">
+				<span class="icon">
+					<Fa icon={faExclamationCircle} />
+				</span>
+				<span>{stringResources.menu.underAttack}</span>
+			</a>
 		</div>
 	</div>
+
+	<button class="open-btn" on:click={() => (opened = true)}>&#9776;</button>
+
+	<a href="/securityincident" class="under-attack under-attack-desktop">
+		{stringResources.menu.underAttack}
+	</a>
 </div>
-<span class="navOpener p-4" on:click={openNav}>&#9776;</span>
 
 <style>
-	.navOpener {
-		cursor:pointer
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
 	}
-	button {
+	.under-attack {
+		background: #ff6633 !important;
+		color: white;
+		height: 1.5rem;
+		width: 6rem;
+		border-radius: 0.02rem;
+		border: none;
+		outline: none;
+		font-size: 0.7rem;
+		cursor: pointer;
+	}
+	.under-attack:hover {
+		background: #d86300 !important;
+	}
+	.under-attack-mobile {
+		display: none;
+	}
+	.under-attack-desktop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	@media (max-width: 900px) {
+		.under-attack-desktop {
+			display: none;
+		}
+		.under-attack-mobile {
+			display: block;
+		}
+	}
+	.sidebar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: max(300px, min(25vw, 350px));
+		background: rgba(22, 22, 22, 0.8);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		transform: translateX(-100%);
+		transition: transform 0.2s ease-out;
+	}
+	.sidebar.opened {
+		transform: translateX(0);
+	}
+	.close-btn {
+		margin-right: 1rem;
+		color: white;
+		border: none;
+		outline: none;
+		background: transparent;
+		font-size: 2rem;
+	}
+	.open-btn {
+		color: black;
+		border: none;
+		outline: none;
+		background: transparent;
+		font-size: 1.25rem;
+	}
+	.overlay-content {
+		width: 100%;
+	}
+	.navitem {
 		color: var(--brandColor) !important;
 		background-color: transparent;
 		border: none;
+		transition: all 250ms;
+		text-align: left;
 	}
-	button:hover {
+	.navitem span {
+		pointer-events: none;
+	}
+	.navitem:hover {
 		color: var(--background) !important;
 	}
-	.overlay {
-		height: 100%;
-		width: 0;
-		position: fixed;
-		z-index: 1;
-		top: 0;
-		left: 0;
-		background-color: rgb(22, 22, 22);
-		background-color: rgba(22, 22, 22, 0.8);
-		overflow-x: hidden;
-		transition: 0.5s;
-	}
-
-	.overlay-content {
-		position: relative;
-		top: 5%;
-		width: 100%;
-		text-align: center;
-		margin-top: 30px;
-	}
-
-	.overlay .closebtn:hover,
-	.overlay .closebtn:focus {
-		color: #f1f1f1;
+	button {
 		cursor: pointer;
-	}
-
-	.overlay .closebtn {
-		position: absolute;
-		right: 45px;
-		font-size: 60px;
-	}
-	@media screen and (max-height: 450px) {
-		.overlay .closebtn {
-			font-size: 40px;
-			right: 35px;
-		}
 	}
 </style>
