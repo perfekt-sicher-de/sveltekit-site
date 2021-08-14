@@ -1,3 +1,4 @@
+"use strict";
 const stringResources = {
     appName: "my-security-check.com",
     menu: {
