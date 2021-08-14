@@ -6,15 +6,12 @@ const stringResources = {
         thirdBtnText: "Datenschutz"
     },
     indexPage: {
-        title: "Hier können Sie Ihre Domains kostenlos und gefahrlos überprüfen",
-        aboutText:
-            "Meine Mission - IT Sicherheit. " +
-            "\n" +
-            "Meine Motivation: Besser sein als die Kriminellen und unsere digitale Zukunft auf sichere Beine stellen.\n" +
-            "\n" +
-            "Werden Sie Teil der Mission und machen Sie jetzt einen kostenlosen Kurz-Test, es ist wirklich ganz einfach:",
+        title: "",
+        aboutText: "„Meine Mission: IT Sicherheit. \nMeine Motivation: Besser sein als die Kriminellen um unsere digitale Zukunft sicherzustellen.“ - Keywan Ghadami\n",
         scanInputPlaceHolder: "www.your-site.de",
         scanStartBtnText: "Scan starten",
+        scanHeadline: "Hier können Sie Ihre Domains kostenlos und gefahrlos überprüfen",
+        scanText: "Werden Sie Teil der Mission und machen Sie jetzt einen kostenlosen Kurz-Test, es ist wirklich ganz einfach:\n",
         urlMissingMsg: "Please enter url in input field."
     },
     resultPage: {
@@ -23,7 +20,7 @@ const stringResources = {
         badTagText: "Bad",
         normalTagText: "Normal",
         goodTagText: "Good",
-        profileBtnText: "Absichern und weiter Testen lassen durch Profies",
+        profileBtnText: "Unterstützung von Profies einholen",
         backBtnText: "Kostenlos selber weiter Testen",
         noDataError:"Couldn't get data for this url."
     },

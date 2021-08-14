@@ -107,6 +107,41 @@
 							</div>
 						</div>
 						<div class="field">
+							<div class="control">
+								<input
+										class="input"
+										type="text"
+										id="url"
+										name="url"
+										placeholder="Website.de"
+										required
+								/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<input
+										class="input"
+										type="text"
+										id="budget"
+										name="budget"
+										placeholder="budget"
+										required
+								/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="control">
+								<textarea
+										class="input"
+										id="anmerkung"
+										name="anmerkung"
+										placeholder="Bitte nehmen Sie mit mir Kontakt auf"
+										required
+								></textarea>
+							</div>
+						</div>
+						<div class="field">
 							<label class="checkbox">
 								<input type="checkbox" id="checkbox" name="checkbox" />
 								{stringResources.contactPage.checkBoxText}

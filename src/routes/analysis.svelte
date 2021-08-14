@@ -8,6 +8,19 @@
 	<title>{stringResources.analysisPage.titleTag} - {stringResources.appName}</title>
 </svelte:head>
 
+
+<section class="hero is-primary">
+    <div class="hero-title m-4">
+        <h1 class="title">{stringResources.analysisPage.mainTitleText}</h1>
+    </div>
+    <div class="hero-body" style="height:800px">
+        <p class="subtitle">
+            {stringResources.analysisPage.mainSubtitleText}
+        </p>
+    </div>
+</section>
+
+
 <div class="columns m-4" in:fade>
 	<div class="column is-half is-offset-3">
         <div class="box">
