@@ -28,7 +28,8 @@ const categories = {
     ast_forty: {
         title: "forty webinspect",
         subtitle : "Dynamic Application Security Testing",
-        exturl: "https://www.microfocus.com/de-de/products/webinspect-dynamic-analysis-dast/overview"
+        exturl: "https://www.microfocus.com/de-de/products/webinspect-dynamic-analysis-dast/overview",
+        parents: ["ast"]
     },
     handsOn: {
         title: "Hands On",
