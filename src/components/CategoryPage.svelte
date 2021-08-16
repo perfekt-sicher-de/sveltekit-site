@@ -28,12 +28,14 @@
 
 <section class="hero is-primary is-halfheight">
 	<div class="hero-body">
-		<p class="title">
-			{page.title}
-		</p>
-		<p class="subtitle">
-			{page.subtitle}
-		</p>
+		<div>
+			<p class="title">
+				{page.title}
+			</p>
+			<p class="subtitle">
+				{page.subtitle}
+			</p>
+		</div>
 	</div>
 </section>
 

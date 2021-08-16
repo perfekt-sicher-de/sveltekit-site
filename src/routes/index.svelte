@@ -25,9 +25,11 @@
 		<h1 class="title">{stringResources.appName}</h1>
 	</div>
 	<div class="hero-body">
-		<p class="subtitle">
-			{stringResources.indexPage.aboutText}
-		</p>
+		<div>
+			<p class="subtitle">
+				{stringResources.indexPage.aboutText}
+			</p>
+		</div>
 	</div>
 </section>
 
