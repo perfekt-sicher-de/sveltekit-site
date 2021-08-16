@@ -20,7 +20,7 @@
 	</div>
 {/if}
 
-<section class="hero is-primary">
+<section class="hero is-primary is-halfheight">
 	<div class="hero-title m-4">
 		<h1 class="title">{stringResources.appName}</h1>
 	</div>
@@ -31,28 +31,32 @@
 	</div>
 </section>
 
-<section class="hero is-secondary m-4">
+<section class="hero is-secondary">
 	<div class="hero-body">
 		<h2 class="title">{stringResources.indexPage.scanHeadline}</h2>
 		<progress class="progress is-small is-primary" max="100">15%</progress>
 		<h2 class="subtitle">{stringResources.indexPage.scanText}</h2>
-		<div class="container">
+		<div class="columns">
+			<div class="column is-10">
 			<input
 					class="input mt-2"
 					id="url"
 					type="url"
 					placeholder={stringResources.indexPage.scanInputPlaceHolder}
 			/>
+			</div>
+			<div class="column is-2">
 			<button class="button m-2 is-outlined is-4" on:click={scanSite}>
 				{stringResources.indexPage.scanStartBtnText}
 			</button>
+			</div>
 		</div>
 	</div>
 </section>
 
-<div class="container">
-	<CategoryPage id="root"/>
-</div>
+<CategoryPage id="root"/>
+
+
 <svelte:head>
 	<title>{stringResources.appName} - {stringResources.indexPage.title}</title>
 </svelte:head>

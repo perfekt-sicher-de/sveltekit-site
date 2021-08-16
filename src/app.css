@@ -15,10 +15,6 @@ html {
 	font-size: 27px !important;
 }
 
-.hero-body {
-	height: 20em;
-}
-
 .register {
 	background-color: var(--background) !important;
 }

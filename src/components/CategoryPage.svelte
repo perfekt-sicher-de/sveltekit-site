@@ -26,7 +26,7 @@
 	<title>{page.title} - {page.subtitle}</title>
 </svelte:head>
 
-<section class="hero is-primary">
+<section class="hero is-primary is-halfheight">
 	<div class="hero-body">
 		<p class="title">
 			{page.title}
