@@ -1,14 +1,17 @@
 :root {
 	--brandColor: hsl(187, 95%, 40%);
+	--brandColorLight: hsl(187, 94%, 35%);
 	--textDark: hsl(0, 0%, 0%);
-	--textLight: hsl(0, 4%, 20%);
+	--textLight: #F1FFE3;
 	--background: #fff;
 	--backgroundLight: #888;
 }
-html,
-body,
-main {
-	background-color: var(--background) !important;
+
+html .hero.is-primary{
+	background: linear-gradient(-45deg, var(--brandColorLight), var(--brandColor));
+}
+html .hero.is-primary .title,html .hero.is-primary .subtitle {
+	color: var(--textLight)
 }
 
 html {
