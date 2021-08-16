@@ -6,12 +6,13 @@
 	let page = categories[id];
 	let rows = [];
 	let i = 0;
+
 	for (let catId in categories) {
 		let cat = categories[catId];
 		if (cat['parents']) {
 			let parents = cat['parents'];
 			if (parents.indexOf(id) !== -1) {
-				if (i % 4 == 0) {
+				if (i % 2 == 0) {
 					let list = [];
 					rows.push(list);
 				}

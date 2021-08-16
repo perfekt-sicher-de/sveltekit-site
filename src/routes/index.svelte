@@ -20,14 +20,17 @@
 	</div>
 {/if}
 
-<section class="hero is-primary is-halfheight">
+<section class="hero is-primary  is-fullheight-with-navbar">
 	<div class="hero-title m-4">
 		<h1 class="title">{stringResources.appName}</h1>
 	</div>
 	<div class="hero-body">
 		<div>
-			<p class="subtitle">
+			<p class="title">
 				{stringResources.indexPage.aboutText}
+			</p>
+			<p class="subtitle">
+				Keywan Ghadami
 			</p>
 		</div>
 	</div>
