@@ -57,9 +57,11 @@
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 1rem;
+		background-color: inherit !important;
 	}
 	.under-attack {
-		background: #ff6633 !important;
+		background: var(--brandColorShift) !important;
+
 		color: white;
 		height: 1.5rem;
 		width: 6rem;
@@ -70,7 +72,7 @@
 		cursor: pointer;
 	}
 	.under-attack:hover {
-		background: #d86300 !important;
+		background: var(--brandColor) !important;
 	}
 	.under-attack-mobile {
 		display: none;
