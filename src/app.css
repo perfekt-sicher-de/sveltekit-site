@@ -15,7 +15,7 @@ html .hero.is-primary .title,html .hero.is-primary .subtitle {
 }
 
 html {
-	font-size: 27px !important;
+	font-size: 20px !important;
 	background: linear-gradient(-45deg, var(--brandColorShift), hsl(187, 95%, 80%)) !important;;
 }
 
