@@ -51,7 +51,7 @@
 			/>
 			</div>
 			<div class="column is-2">
-			<button class="button m-2 is-outlined is-4" on:click={scanSite}>
+			<button class="button m-2 is-4 is-primary" on:click={scanSite}>
 				{stringResources.indexPage.scanStartBtnText}
 			</button>
 			</div>

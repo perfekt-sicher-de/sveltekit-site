@@ -1,14 +1,14 @@
 :root {
 	--brandColor: hsl(187, 95%, 40%);
-	--brandColorLight: hsl(187, 94%, 35%);
+	--brandColorShift: hsl(187, 94%, 35%);
 	--textDark: hsl(0, 0%, 0%);
 	--textLight: #F1FFE3;
-	--background: #fff;
+	--background: #F1FFE3;
 	--backgroundLight: #888;
 }
 
-html .hero.is-primary{
-	background: linear-gradient(-45deg, var(--brandColorLight), var(--brandColor));
+html .hero.is-primary, html button.is-primary{
+	background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor));
 }
 html .hero.is-primary .title,html .hero.is-primary .subtitle {
 	color: var(--textLight)
@@ -16,6 +16,7 @@ html .hero.is-primary .title,html .hero.is-primary .subtitle {
 
 html {
 	font-size: 27px !important;
+	background: linear-gradient(-45deg, var(--brandColorShift), hsl(187, 95%, 80%)) !important;;
 }
 
 /** fix android full width **/
