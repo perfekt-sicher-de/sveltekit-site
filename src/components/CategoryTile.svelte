@@ -6,11 +6,7 @@
     let subtitle = '';
     let exturl = id;
     let image = '';
-    let x = Math.floor(Math.random() * 256);
-    let y = Math.floor(Math.random() * 256);
-    let z = Math.floor(Math.random() * 256);
-    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
-
+    
     if (categories[id]) {
         title = categories[id].title;
         subtitle = categories[id].subtitle;
