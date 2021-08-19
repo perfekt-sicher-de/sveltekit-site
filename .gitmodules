@@ -1,3 +1,6 @@
 [submodule "starpi"]
 	path = starpi
 	url = git@github.com:my-security-check-com/starpi.git
+[submodule "strapi"]
+	path = strapi
+	url = git@github.com:my-security-check-com/strapi.git
