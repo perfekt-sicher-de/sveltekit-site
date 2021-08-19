@@ -1,0 +1,3 @@
+[submodule "starpi"]
+	path = starpi
+	url = git@github.com:my-security-check-com/starpi.git
