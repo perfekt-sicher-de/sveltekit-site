@@ -60,19 +60,19 @@
 		background-color: inherit !important;
 	}
 	.under-attack {
-		background: var(--brandColorShift) !important;
-
+		background: #f63 !important;
+		font-weight: 700;
 		color: white;
-		height: 1.5rem;
-		width: 6rem;
+		padding: 8px 24px;
 		border-radius: 0.02rem;
 		border: none;
 		outline: none;
 		font-size: 0.7rem;
 		cursor: pointer;
+		text-transform: capitalize;
 	}
 	.under-attack:hover {
-		background: var(--brandColor) !important;
+		background: #ff7f54 !important;
 	}
 	.under-attack-mobile {
 		display: none;
