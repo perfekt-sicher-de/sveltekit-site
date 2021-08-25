@@ -28,7 +28,7 @@
         "from-left 1s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
         "from-right 3s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
         "from-left 5s cubic-bezier(0.35, 0.5, 0.65, 0.95) both",
-        "from-right 7s cubic-bezier(0.35, 0.5, 0.65, 0.95) both",
+        "from-right 7s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"
     ];
 
 </script>
