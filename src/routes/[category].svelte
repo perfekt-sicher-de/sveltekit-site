@@ -79,7 +79,7 @@
 {#each categories as subCategory, i  (subCategory.id)}
 
     <Saos animation={animation[i%5]}>
-        <div class="tile is-ancestor" in:slide>
+        <div class="tile is-ancestor">
             <CategoryTile cat={subCategory} />
         </div>
     </Saos>
@@ -88,8 +88,8 @@
 {#each products as product, i  (product.id)}
 
     <Saos animation={animation[i%5]}>
-        <div class="tile is-ancestor" in:slide>
-            <CategoryTile cat={product} />
+        <div class="tile is-ancestor" >
+            <CategoryTile cat={product}/>
         </div>
     </Saos>
 {/each}

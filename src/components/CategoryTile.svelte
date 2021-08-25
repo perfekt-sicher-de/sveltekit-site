@@ -17,10 +17,23 @@
         }
 
     }
+    function rand(min, max) {
+        return parseInt(Math.random() * (max-min+1), 10) + min;
+    }
+
+    function get_random_color() {
+        var h = rand(170, 191);
+        var s = rand(30, 100);
+        var l = rand(50, 70);
+        return 'hsl(' + h + ',' + s + '%,' + l + '%)';
+    }
+    let color = Math.floor(Math.random() * 255);
+    let background = get_random_color();
+
     import { goto } from '$app/navigation';
 </script>
 <div class="tile is-parent">
-    <article class="tile is-child is-clickable box" style="" on:click={()=>goto(exturl)}>
+    <article class="tile is-child is-clickable box" style="background:{background}" on:click={()=>goto(exturl)}>
         {#if image}
             <figure style="background: #005bcb;" class="title image is-4by3">
                 <img alt="{title}" src="{image}">
