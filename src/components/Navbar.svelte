@@ -10,10 +10,10 @@
 	export let categories;
 
 	function handleClick(event) {
-		const target = event.target;
-		if (target.tagName === 'A') {
-			opened = false;
-		}
+		let burgerIcon = document.getElementById('burger');
+		let dropMenu = document.getElementById('navbar');
+		burgerIcon.classList.toggle('is-active');
+		dropMenu.classList.toggle('is-active');
 	}
 </script>
 
@@ -24,14 +24,14 @@
 				<Fa icon={faLock} />
 			</span><span>my-security-check.com</span>
 		</a>
-		<div class="navbar-burger" data-target="navbarExampleTransparentExample">
+		<div id="burger" class="navbar-burger" data-target="navbar"  on:click={handleClick}>
 			<span></span>
 			<span></span>
 			<span></span>
 		</div>
 	</div>
 
-	<div class="navbar-menu">
+	<div class="navbar-menu" id="navbar">
 		<div class="navbar-start">
 			<a href="/impressum" class="navbar-item">
 				<span class="icon">

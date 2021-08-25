@@ -42,7 +42,7 @@
 </section>
 
 
-{#each products as product}
+{#each products as product (product.id)}
     <div class="tile is-ancestor" in:slide>
         <CategoryTile cat={product} />
     </div>
