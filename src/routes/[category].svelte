@@ -17,16 +17,48 @@
 </script>
 <script>
     import { goto } from '$app/navigation';
+    import Saos from "saos";
     import { fade } from 'svelte/transition';
     import { slide } from 'svelte/transition';
     import { onMount, tick } from 'svelte';
     export let category;
     export let products;
+
+    let animation = [
+        "from-left 1s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
+        "from-right 3s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
+        "from-left 5s cubic-bezier(0.35, 0.5, 0.65, 0.95) both",
+        "from-right 7s cubic-bezier(0.35, 0.5, 0.65, 0.95) both",
+    ];
+
 </script>
 
 <svelte:head>
     <title>{category.title}</title>
 </svelte:head>
+
+<style>
+    @keyframes -global-from-left {
+        0% {
+            transform: rotateX(50deg) translateX(-200vw) skewX(-50deg);
+            opacity: 1;
+        }
+        100% {
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+            opacity: 1;
+        }
+    }
+    @keyframes -global-from-right {
+        0% {
+            transform: rotateX(50deg) translateX(200vw) skewX(-50deg);
+            opacity: 1;
+        }
+        100% {
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+            opacity: 1;
+        }
+    }
+</style>
 
 <section class="hero is-primary is-halfheight">
     <div class="hero-body">
@@ -41,11 +73,13 @@
     </div>
 </section>
 
+{#each products as product, i  (product.id)}
 
-{#each products as product (product.id)}
-    <div class="tile is-ancestor" in:slide>
-        <CategoryTile cat={product} />
-    </div>
+    <Saos animation={animation[i%4]}>
+        <div class="tile is-ancestor" in:slide>
+            <CategoryTile cat={product} />
+        </div>
+    </Saos>
 {/each}
 
 
