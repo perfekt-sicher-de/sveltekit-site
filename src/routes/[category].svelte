@@ -29,9 +29,10 @@
 
     let animation = [
         "from-left 1s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
-        "from-right 3s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
-        "from-left 5s cubic-bezier(0.35, 0.5, 0.65, 0.95) both",
-        "from-right 7s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"
+        "from-right 2s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
+        "from-left 1s cubic-bezier(0.35, 0.5, 0.65, 0.95) both",
+        "from-right 2s cubic-bezier(0.35, 0.5, 0.65, 0.95) both",
+        "from-left 1s cubic-bezier(0.35, 0.5, 0.65, 0.95) both"
     ];
 
 </script>
@@ -79,7 +80,7 @@
 
 {#each combined as subCategory, i  (subCategory.id)}
 
-    <Saos animation={animation[i%4]}>
+    <Saos animation={animation[i%5]}>
         <div class="tile is-ancestor" in:slide>
             <CategoryTile cat={subCategory} />
         </div>
