@@ -25,8 +25,6 @@
     export let categories;
     export let products;
 
-    let combined = categories.concat(products);
-
     let animation = [
         "from-left 1s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
         "from-right 2s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
@@ -78,11 +76,20 @@
 </section>
 
 
-{#each combined as subCategory, i  (subCategory.id)}
+{#each categories as subCategory, i  (subCategory.id)}
 
     <Saos animation={animation[i%5]}>
         <div class="tile is-ancestor" in:slide>
             <CategoryTile cat={subCategory} />
+        </div>
+    </Saos>
+{/each}
+
+{#each products as product, i  (product.id)}
+
+    <Saos animation={animation[i%5]}>
+        <div class="tile is-ancestor" in:slide>
+            <CategoryTile cat={product} />
         </div>
     </Saos>
 {/each}
