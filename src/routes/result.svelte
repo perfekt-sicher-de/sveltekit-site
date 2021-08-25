@@ -127,7 +127,6 @@
 	</div>
 </div>
 
-<CategoryPage id="ast"/>
 <style>
 	.has-addons {
 		justify-content: center !important;

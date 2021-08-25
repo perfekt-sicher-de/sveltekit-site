@@ -1,4 +1,0 @@
-
-<CategoryPage id="siem"/>
-
-

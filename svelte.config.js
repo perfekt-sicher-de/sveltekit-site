@@ -3,6 +3,9 @@ import autoImport from 'vite-plugin-autoimport';
 //import { minifyHtml } from 'vite-plugin-html';
 import nadapter from '@sveltejs/adapter-node';
 import sadapter from '@sveltejs/adapter-static';
+
+
+
 let adapter;
 let spaMode = true;
 if (spaMode) {
@@ -35,11 +38,15 @@ export default {
 			},
 			resolve: {
 				alias: {
-					$components: path.resolve('./src/components'),
+					$components: path.resolve('./src/components')
 				}
 			},
 			optimizeDeps: {
-				exclude: ['svelte-speedometer']
+				exclude: ['better-sqlite3, svelte-speedometer']
+			},
+			define: {
+				'process.env': process.env,
+				'process.versions': process.versions
 			}
 		}
 	}

@@ -1,20 +1,19 @@
 <script>
-    export let id;
-    import categories from '../categories';
-
+    export let cat;
+    let id = cat.id;
     let title = id;
-    let subtitle = '';
-    let exturl = id;
+    let shortdesc = '';
+    let exturl = cat.slug;
     let image = '';
     
-    if (categories[id]) {
-        title = categories[id].title;
-        subtitle = categories[id].subtitle;
-        if (categories[id].exturl != undefined) {
-            exturl = categories[id].exturl;
+    if (cat) {
+        title = cat.title;
+        shortdesc = cat.shortdesc;
+        if (cat.exturl != undefined) {
+            exturl = cat.exturl;
         }
-        if (categories[id].image != undefined) {
-            image = categories[id].image;
+        if (cat.image != undefined) {
+            image = cat.image;
         }
 
     }
@@ -29,7 +28,7 @@
         {:else}
             <p class="title">{title}</p>
         {/if}
-        <p class="subtitle">{subtitle}</p>
+        <p class="subtitle">{shortdesc}</p>
 
     </article>
 </div>

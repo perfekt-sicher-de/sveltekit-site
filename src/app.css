@@ -2,7 +2,7 @@
 	--brandColor: hsl(187, 95%, 40%);
 	--brandColorShift: hsl(187, 94%, 35%);
 	--textDark: hsl(0, 0%, 0%);
-	--textLight: #F1FFE3;
+	--textLight: #FFF;
 	--background: #F1FFE3;
 	--backgroundLight: #888;
 }
@@ -11,21 +11,25 @@ html .hero.is-primary, html button.is-primary{
 	background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor));
 }
 html .hero.is-primary .title,html .hero.is-primary .subtitle {
-	color: var(--textLight)
+	color: var(--textLight);
+}
+
+html .content h1,html .content h2,html .content h3 {
+	color: var(--textLight);
+}
+
+.navbar, .navbar-dropdown {
+	background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor)) !important;
+	color: var(--textLight) !important;
+}
+.navbar a.navbar-item, .navbar-menu a.navbar-link {
+	color: var(--textLight) !important;
 }
 
 html {
 	font-size: 20px !important;
-	background: linear-gradient(-45deg, var(--brandColorShift), hsl(187, 95%, 80%)) !important;;
 }
 
-/** fix android full width **/
-body, html {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-}
 
 
 .register {
@@ -68,12 +72,12 @@ body, html {
 }
 
 .button {
-  border-color: var(--brandColor);
-  color: var(--brandColor);
+	border-color: var(--brandColor);
+	color: var(--brandColor);
 }
 .button:hover {
-  background-color: var(--brandColor);
-  color: var(--background);
+	background-color: var(--brandColor);
+	color: var(--background);
 }
 
 input:focus {
@@ -91,9 +95,9 @@ input:focus {
 .message{
 	word-break: break-all;
 }
-.message-body {
-	background-color: var(--background) !important;
-	color: var(--brandColor) !important;
+html .message-body {
+	background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor));
+	color: var(--textLight) !important;
 }
 .message-header {
 	background-color: var(--brandColor) !important;

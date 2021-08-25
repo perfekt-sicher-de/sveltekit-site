@@ -12,15 +12,13 @@
 		await goto(`/result?url=${url}`);
 	}
 </script>
-
 {#if showAlert}
 	<div class="notification is-danger" in:fade>
 		<button class="delete" on:click={() => (showAlert = false)} />
 		{stringResources.indexPage.urlMissingMsg}
 	</div>
 {/if}
-
-<section class="hero is-primary  is-fullheight-with-navbar">
+<section class="hero is-primary is-halfheight">
 	<div class="hero-title m-4">
 		<h1 class="title">{stringResources.appName}</h1>
 	</div>
@@ -35,7 +33,7 @@
 		</div>
 	</div>
 </section>
-
+<!--
 <section class="hero is-secondary">
 	<div class="hero-body">
 		<h2 class="title">{stringResources.indexPage.scanHeadline}</h2>
@@ -58,9 +56,7 @@
 		</div>
 	</div>
 </section>
-
-<CategoryPage id="root"/>
-
+-->
 
 <svelte:head>
 	<title>{stringResources.appName} - {stringResources.indexPage.title}</title>
