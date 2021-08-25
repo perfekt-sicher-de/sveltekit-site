@@ -22,7 +22,10 @@
     import { slide } from 'svelte/transition';
     import { onMount, tick } from 'svelte';
     export let category;
+    export let categories;
     export let products;
+
+    let combined = categories.concat(products);
 
     let animation = [
         "from-left 1s cubic-bezier(0.32, 0.4, 0.64, 0.92) both",
@@ -73,13 +76,13 @@
     </div>
 </section>
 
-{#each products as product, i  (product.id)}
+
+{#each combined as subCategory, i  (subCategory.id)}
 
     <Saos animation={animation[i%4]}>
         <div class="tile is-ancestor" in:slide>
-            <CategoryTile cat={product} />
+            <CategoryTile cat={subCategory} />
         </div>
     </Saos>
 {/each}
-
 
