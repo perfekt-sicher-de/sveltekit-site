@@ -5,7 +5,7 @@
     let shortdesc = '';
     let exturl = cat.slug;
     let image = '';
-    
+    let attributes = [];
     if (cat) {
         title = cat.title;
         shortdesc = cat.shortdesc;
@@ -15,7 +15,10 @@
         if (cat.image != undefined) {
             image = cat.image;
         }
-
+        if (cat.variants) {
+            for (let variant of cat.variants)
+            attributes = cat.variants[0].features;
+        }
     }
     function rand(min, max) {
         return parseInt(Math.random() * (max-min+1), 10) + min;
@@ -47,12 +50,14 @@
         {/if}
         <p class="subtitle" style="color:#fff;">{shortdesc}</p>
         <div class="">
-            <div class="icon-text">
-                <span class="icon has-text-success">
-                    <Icon icon="faCheckSquare"/>
-                </span>
-                <span>Success</span>
-            </div>
+            {#each attributes as attr}
+                <div class="icon-text">
+                    <span class="icon has-text-success">
+                        <Icon icon="faCheckSquare"/>
+                    </span>
+                    <span style="color:#fff">{attr}</span>
+                </div>
+            {/each}
         </div>
     </article>
 </div>
