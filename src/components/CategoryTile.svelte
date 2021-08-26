@@ -26,7 +26,10 @@
 
 
     function get_random_color() {
-        let h = rand(170, 191);
+        let h = rand(165, 191);
+        if (h > 180 && h < 190) {
+            h += 20;
+        }
         let s = rand(30, 100);
         let l = rand(40, 40);
         let c1 = 'hsl(' + h + ',' + s + '%,' + l + '%)';
