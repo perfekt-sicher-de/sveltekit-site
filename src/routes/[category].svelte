@@ -75,7 +75,7 @@
     </div>
 </section>
 
-
+<div class="m-4"></div>
 {#each categories as subCategory, i  (subCategory.id)}
 
     <Saos animation={animation[i%5]}>
