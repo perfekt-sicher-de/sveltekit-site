@@ -23,12 +23,12 @@
 
 
     function get_random_color() {
-        var h = rand(170, 191);
-        var s = rand(30, 100);
-        var l = rand(40, 40);
-        c1 = 'hsl(' + h + ',' + s + '%,' + l + '%)';
-        l2 = l - 8;
-        c2 = 'hsl(' + h + ',' + s + '%,' + l2 + '%)';
+        let h = rand(170, 191);
+        let s = rand(30, 100);
+        let l = rand(40, 40);
+        let c1 = 'hsl(' + h + ',' + s + '%,' + l + '%)';
+        let l2 = l - 8;
+        let c2 = 'hsl(' + h + ',' + s + '%,' + l2 + '%)';
         return 'linear-gradient(-45deg, '+c2+', '+c1+',' +c2+')';
     }
     let color = Math.floor(Math.random() * 255);
@@ -46,6 +46,13 @@
             <p class="title" style="color:#fff;">{title}</p>
         {/if}
         <p class="subtitle" style="color:#fff;">{shortdesc}</p>
-
+        <div class="">
+            <div class="icon-text">
+                <span class="icon has-text-success">
+                    <Icon icon="faCheckSquare"/>
+                </span>
+                <span>Success</span>
+            </div>
+        </div>
     </article>
 </div>
