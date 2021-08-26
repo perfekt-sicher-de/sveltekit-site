@@ -193,6 +193,27 @@ export async function get({ params }) {
     where category_id = ?`;
     const products = await DB.prepare(sql).all([category.id]);
 
+    const variants_sql = `select variant.name, variant.price, variant.id from product_components
+              join components_products_variants as variant ON component_id = variant.id
+    where component_type = 'components_products_variants' and product_id = ?`;
+
+    const features_sql = `select feature.name from components_products_variants_components as variant
+              join components_pages_features as feature ON component_id = feature.id
+    where component_type = 'components_pages_features' and components_products_variant_id = ?`;
+
+    for (let product of products) {
+        let variants = await DB.prepare(variants_sql).all([product.id]);
+        product.variants = variants;
+        for (let variant of variants) {
+            variant.features = [];
+            let features = await DB.prepare(features_sql).all([variant.id]);
+            for (let feature of features) {
+                variant.features.push(feature.name);
+            }
+        }
+    }
+
+
     return {
         body: {
             category: category,

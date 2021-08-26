@@ -1,0 +1,100 @@
+@import 'config';
+
+html {
+	font-size: $primaryFont;
+	.hero.is-primary {
+		@include customBackground;
+		.title,
+		.subtitle {
+			color: $textLight;
+		}
+	}
+	button.is-primary {
+		@include customBackground;
+	}
+	.content {
+		h1,
+		h2,
+		h3 {
+			color: $textLight;
+		}
+	}
+}
+.navbar {
+	@include customBackground;
+
+	&-dropdown {
+		@extend .navbar;
+	}
+	&-start,
+	&-menu.is-active {
+		background: transparent !important;
+		color: $textLight !important;
+	}
+	&-menu {
+		a.navbar-link {
+			color: $textLight !important;
+		}
+	}
+	a.navbar-item {
+		color: $textLight !important;
+		&:hover {
+			@include customBackground2;
+		}
+	}
+}
+.register {
+	background-color: $background !important;
+}
+.message.is-primary .message-body {
+	border-color: $brandColor !important;
+	color: $brandColor !important;
+	background-color: $backgroundLight !important;
+}
+#const {
+	color: $textDark !important;
+}
+.button.is-link {
+	&:hover,
+	&:active {
+		background-color: $brandColor;
+	}
+}
+.objects {
+	@include displayObject;
+	display: inline-block;
+	background-color: $brandColor;
+	color: $background;
+	text-align: center;
+	cursor: move;
+}
+.dropMessage,
+.title {
+	color: $textDark;
+}
+.button {
+	border-color: $brandColor;
+	color: $brandColor;
+	&:hover {
+		background-color: $brandColor;
+		color: $background;
+	}
+}
+input:focus {
+	border-color: $brandColor !important;
+}
+.subtitle {
+	color: $textLight;
+}
+/** imprint and terms **/
+.message {
+	word-break: break-all;
+	&-header {
+		background-color: $brandColor !important;
+		color: $textLight !important;
+	}
+	&-body {
+		background: linear-gradient(-45deg, $brandColorShift, $brandColor);
+		color: $textLight !important;
+	}
+}

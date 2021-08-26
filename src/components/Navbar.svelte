@@ -17,6 +17,7 @@
 	}
 </script>
 
+
 <nav class="navbar is-transparent">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
@@ -33,6 +34,18 @@
 
 	<div class="navbar-menu" id="navbar">
 		<div class="navbar-start">
+			<div class="navbar-item has-dropdown is-hoverable">
+				<a class="navbar-link" href="{category.slug}">
+					{category.title}
+				</a>
+				<div class="navbar-dropdown is-boxed">
+					{#each categories as cat, i}
+						<a class="navbar-item" href="{cat.slug}">
+							{cat.title}
+						</a>
+					{/each}
+				</div>
+			</div>
 			<a href="/impressum" class="navbar-item">
 				<span class="icon">
 					<Fa icon={faInfo} />
@@ -49,18 +62,6 @@
 					{stringResources.menu.thirdBtnText}
 				</span>
 			</a>
-			<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link" href="{category.slug}">
-					{category.title}
-				</a>
-				<div class="navbar-dropdown is-boxed">
-					{#each categories as cat, i}
-						<a class="navbar-item" href="{cat.slug}">
-							{cat.title}
-						</a>
-					{/each}
-				</div>
-			</div>
 		</div>
 
 		<div class="navbar-end">
