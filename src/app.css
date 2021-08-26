@@ -8,7 +8,7 @@
 }
 
 html .hero.is-primary, html button.is-primary{
-    background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor));
+    background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor), var(--brandColorShift));
 }
 html .hero.is-primary .title,html .hero.is-primary .subtitle {
     color: var(--textLight);
@@ -18,13 +18,20 @@ html .content h1,html .content h2,html .content h3 {
     color: var(--textLight);
 }
 
-.navbar, .navbar-dropdown, .navbar-start {
-    background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor)) !important;
+.navbar, .navbar-dropdown {
+    background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor), var(--brandColorShift)) !important;
     color: var(--textLight) !important;
 }
 
+
+.navbar .navbar-start, .navbar .navbar-menu.is-active {
+    background: transparent !important;
+    color: var(--textLight) !important;
+}
+
+
 .navbar a.navbar-item:hover {
-    background: linear-gradient(-45deg, var(--brandColorShift), var(--brandColor)) !important;
+    background: linear-gradient(-45deg, var(--brandColor), var(--brandColorShift), var(--brandColor)) !important;
     color: var(--textLight) !important;
 }
 
