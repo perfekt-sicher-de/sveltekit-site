@@ -1,4 +1,4 @@
-@import 'config';
+@use 'config' as *;
 
 html {
 	font-size: $primaryFont;
@@ -22,7 +22,6 @@ html {
 }
 .navbar {
 	@include customBackground;
-
 	&-dropdown {
 		@extend .navbar;
 	}

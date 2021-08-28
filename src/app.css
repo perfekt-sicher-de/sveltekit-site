@@ -1,4 +1,4 @@
-:root {
+/* :root {
 	--brandColor: hsl(187, 95%, 40%);
 	--brandColorShift: hsl(187, 94%, 35%);
 	--textDark: hsl(0, 0%, 0%);
@@ -119,10 +119,10 @@ input:focus {
 }
 .subtitle {
 	color: var(--textLight);
-}
+} */
 
 /** imprint and terms **/
-.message {
+/* .message {
 	word-break: break-all;
 }
 html .message-body {
@@ -131,4 +131,4 @@ html .message-body {
 }
 .message-header {
 	background-color: var(--brandColor) !important;
-}
+} */
