@@ -1,6 +1,5 @@
 <script>
-	import '../app.css';
-	import 'bulma/css/bulma.css';
+	import '../styles/app.scss';
 	import stringResources from '../stringResources';
 	import Navbar from '../components/Navbar.svelte';
     export let categories;
