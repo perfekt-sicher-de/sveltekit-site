@@ -5,7 +5,7 @@ const stringResources = {
         firtsBtnText: "Home",
         secondBtnText: "Impressum",
         thirdBtnText: "Datenschutz",
-        underAttack: "Under Attack?"
+        underAttack: "Sie werden angegriffen?"
     },
     indexPage: {
         title: "",
