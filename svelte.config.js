@@ -4,8 +4,6 @@ import autoImport from 'vite-plugin-autoimport';
 import nadapter from '@sveltejs/adapter-node';
 import sadapter from '@sveltejs/adapter-static';
 
-
-
 let adapter;
 let spaMode = true;
 if (spaMode) {
@@ -14,9 +12,7 @@ if (spaMode) {
 		assets: 'build',
 		fallback: null
 	});
-
-}
-else {
+} else {
 	adapter = nadapter({
 		out: 'build'
 	});
@@ -27,9 +23,9 @@ export default {
 		vite: {
 			plugins: [
 				autoImport({
-					components: ['./src/components'],
-				}),
-//				minifyHtml() -> it does somehow not work
+					components: ['./src/components']
+				})
+				//				minifyHtml() -> it does somehow not work
 			],
 			build: {
 				rollupOptions: {
