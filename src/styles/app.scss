@@ -1,6 +1,28 @@
 @charset "utf-8";
 @use 'config' as *;
-@import "../node_modules/bulma/bulma.sass";
+//@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma/sass/utilities/_all";
+@import "../node_modules/bulma/sass/base/_all";
+@import "../node_modules/bulma/sass/elements/_all";
+//@import "../node_modules/bulma/sass/form/_all";
+
+//TODO: extract
+//@import "../node_modules/bulma/sass/components/_all";
+@import "../node_modules/bulma/sass/components/menu";
+@import "../node_modules/bulma/sass/components/navbar";
+@import "../node_modules/bulma/sass/components/message";
+
+
+@import "../node_modules/bulma/sass/grid/_all";
+
+//fixme: move helpers to svelte components
+//and only import the ones used
+@import "../node_modules/bulma/sass/helpers/_all";
+
+//@import "../node_modules/bulma/sass/layout/_all";
+@import "../node_modules/bulma/sass/layout/hero";
+@import "../node_modules/bulma/sass/layout/section";
+
 html {
 	.hero.is-primary {
 		@include customBackground;
