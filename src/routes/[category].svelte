@@ -78,7 +78,7 @@
 <div class="m-4"></div>
 {#each categories as subCategory, i  (subCategory.id)}
 
-    <Saos animation={animation[i%5]}>
+    <Saos animation={animation[i%5]} once=true>
         <div class="tile is-ancestor">
             <CategoryTile cat={subCategory} />
         </div>
