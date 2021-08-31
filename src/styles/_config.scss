@@ -1,30 +1,16 @@
 $brandColor: hsl(187, 95%, 40%);
 $brandColorShift: hsl(187, 94%, 35%);
 $textDark: hsl(0, 0%, 0%);
-$textLight: #fff;
+$textLight: #123e92;
 $backgroundLight: #888;
 $shadowLight: #999;
 $primaryFont: 20px !important;
 
 /** bulma variable */
 $background: #f1ffe3;
-$text: #fff;
-$text-invert: #ddd;
-$text-light: #fff;
+$navbar-background-color: #f1f1f1;
+$text: $textLight;
 $text-strong: #eee;
-$link: #fff;
-
-
-
-@mixin displayObject {
-	width: 200px;
-	height: 50px;
-	margin: 10px;
-	padding: 8px;
-	font-size: 18px;
-	border: $brandColor 1px solid;
-	box-shadow: 2px 2px 2px $shadowLight;
-}
 
 @mixin customBackground {
 	background: linear-gradient(-45deg, $brandColorShift, $brandColor, $brandColorShift);

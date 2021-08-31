@@ -17,7 +17,7 @@
 	}
 </script>
 
-<nav class="navbar is-transparent">
+<nav class="navbar">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
 			<span class="icon">

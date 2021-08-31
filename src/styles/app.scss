@@ -2,7 +2,6 @@
 @use 'config' as *;
 @import "../node_modules/bulma/bulma.sass";
 html {
-	font-size: $primaryFont;
 	.hero.is-primary {
 		@include customBackground;
 	}
@@ -10,8 +9,8 @@ html {
 		@include customBackground;
 	}
 }
+/*
 .navbar {
-	@include customBackground;
 	&-dropdown {
 		@extend .navbar;
 	}
@@ -32,6 +31,7 @@ html {
 		}
 	}
 }
+*/
 .register {
 	background-color: $background !important;
 }
@@ -48,14 +48,6 @@ html {
 	&:active {
 		background-color: $brandColor;
 	}
-}
-.objects {
-	@include displayObject;
-	display: inline-block;
-	background-color: $brandColor;
-	color: $background;
-	text-align: center;
-	cursor: move;
 }
 .dropMessage,
 .title {
