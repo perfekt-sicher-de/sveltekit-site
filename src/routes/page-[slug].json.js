@@ -20,7 +20,7 @@ export async function get({ params }) {
 
         return {
             body: {
-                page: page
+                page
             }
         };
     } catch (e) {

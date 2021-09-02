@@ -173,7 +173,7 @@ export async function get({ params }) {
     if (!category) {
         return {
             body: {
-                error: slug + " not found"
+                error: `${slug} not found`
             }
         }
     }
@@ -202,12 +202,12 @@ export async function get({ params }) {
     where component_type = 'components_pages_features' and components_products_variant_id = ?`;
 
     for (let product of products) {
-        let variants = await DB.prepare(variants_sql).all([product.id]);
+        const variants = await DB.prepare(variants_sql).all([product.id]);
         product.variants = variants;
-        for (let variant of variants) {
+        for (const variant of variants) {
             variant.features = [];
             let features = await DB.prepare(features_sql).all([variant.id]);
-            for (let feature of features) {
+            for (const feature of features) {
                 variant.features.push(feature.name);
             }
         }
@@ -216,9 +216,9 @@ export async function get({ params }) {
 
     return {
         body: {
-            category: category,
-            categories: categories,
-            products: products,
+            category,
+            categories,
+            products
         }
     };
 
