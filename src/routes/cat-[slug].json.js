@@ -201,12 +201,12 @@ export async function get({ params }) {
               join components_pages_features as feature ON component_id = feature.id
     where component_type = 'components_pages_features' and components_products_variant_id = ?`;
 
-    for (let product of products) {
+    for (const product of products) {
         const variants = await DB.prepare(variants_sql).all([product.id]);
         product.variants = variants;
         for (const variant of variants) {
             variant.features = [];
-            let features = await DB.prepare(features_sql).all([variant.id]);
+            const features = await DB.prepare(features_sql).all([variant.id]);
             for (const feature of features) {
                 variant.features.push(feature.name);
             }

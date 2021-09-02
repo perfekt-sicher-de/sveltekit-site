@@ -21,8 +21,7 @@ export async function SendPostRequest(url, data) {
                 },
                 body: JSON.stringify(data)
             });
-        let json = await response.json();
-        return json;
+        return response.json();
     }
     catch (err) {
         return null;
