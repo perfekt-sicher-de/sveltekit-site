@@ -1,21 +1,17 @@
-$brandColor: hsl(187, 95%, 40%);
-$brandColorShift: hsl(187, 94%, 35%);
-$textDark: hsl(0, 0%, 0%);
-$textLight: #123e92;
-$backgroundLight: #888;
-$shadowLight: #999;
-$primaryFont: 20px !important;
+
+//$primary: hsl(187, 95%, 40%);
+$primary: rgb(27, 87, 136);
+$link: $primary;
+$link-visited: $primary;
+
+
+$text: darken($primary,10);
+$text-strong: darken($text,10);
+
+/*
+$text-light: $grey;
+*/
+
 
 /** bulma variable */
-$background: #f1ffe3;
 $navbar-background-color: #f1f1f1;
-$text: $textLight;
-$text-strong: #eee;
-
-@mixin customBackground {
-	background: linear-gradient(-45deg, $brandColorShift, $brandColor, $brandColorShift);
-}
-
-@mixin customBackground2 {
-	background: linear-gradient(-45deg, $brandColor, $brandColorShift, $brandColor) !important;
-}

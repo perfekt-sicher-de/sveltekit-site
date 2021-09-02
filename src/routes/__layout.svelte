@@ -8,7 +8,7 @@
 
 <script context="module">
     export async function load({ fetch, page }) {
-        const res = await fetch('/$.json');
+        const res = await fetch('/cat-$.json');
         let data = await res.json();
 
         if (data) {

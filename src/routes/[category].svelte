@@ -1,13 +1,10 @@
 <script context="module">
     export async function load({ fetch, page }) {
         let slug = page.params['category'];
-        const res = await fetch('/'+slug+'.json');
+        const res = await fetch('/cat-'+slug+'.json');
         let data = await res.json();
         if (data.error) {
-            return {
-                status: 404,
-                error: new Error(data.error),
-            };
+            return undefined;
         }
 
         return {

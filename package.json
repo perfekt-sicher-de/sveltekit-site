@@ -30,6 +30,7 @@
     "svelma": "^0.4.5",
     "svelte": "^3.42.3",
     "svelte-fa": "^2.2.1",
+    "svelte-markdown": "^0.1.12",
     "svelte-preprocess": "^4.8.0",
     "svelte-preprocess-sass": "^2.0.1",
     "svelte-speedometer": "^1.1.0",

@@ -1,98 +1,25 @@
 @charset "utf-8";
-@use 'config' as *;
-//@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma/sass/utilities/functions";
+@import 'config';
 @import "../node_modules/bulma/sass/utilities/_all";
 @import "../node_modules/bulma/sass/base/_all";
-@import "../node_modules/bulma/sass/elements/_all";
+@import "../node_modules/bulma/sass/elements/box";
+@import "../node_modules/bulma/sass/elements/button";
+@import "../node_modules/bulma/sass/elements/container";
+@import "../node_modules/bulma/sass/elements/content";
+@import "../node_modules/bulma/sass/elements/icon";
+@import "../node_modules/bulma/sass/elements/image";
+@import "../node_modules/bulma/sass/elements/notification";
+@import "../node_modules/bulma/sass/elements/progress";
+//@import "../node_modules/bulma/sass/elements/table";
+//@import "../node_modules/bulma/sass/elements/tag";
+@import "../node_modules/bulma/sass/elements/title";
+@import "../node_modules/bulma/sass/elements/other";
 //@import "../node_modules/bulma/sass/form/_all";
-
-//TODO: extract
-//@import "../node_modules/bulma/sass/components/_all";
 @import "../node_modules/bulma/sass/components/menu";
 @import "../node_modules/bulma/sass/components/navbar";
 @import "../node_modules/bulma/sass/components/message";
-
-
 @import "../node_modules/bulma/sass/grid/_all";
-
-//fixme: move helpers to svelte components
-//and only import the ones used
 @import "../node_modules/bulma/sass/helpers/_all";
-
-//@import "../node_modules/bulma/sass/layout/_all";
 @import "../node_modules/bulma/sass/layout/hero";
 @import "../node_modules/bulma/sass/layout/section";
-
-html {
-	.hero.is-primary {
-		@include customBackground;
-	}
-	button.is-primary {
-		@include customBackground;
-	}
-}
-/*
-.navbar {
-	&-dropdown {
-		@extend .navbar;
-	}
-	&-start,
-	&-menu.is-active {
-		background: transparent !important;
-		color: $textLight !important;
-	}
-	&-menu {
-		a.navbar-link {
-			color: $textLight !important;
-		}
-	}
-	a.navbar-item, a.navbar-link  {
-		color: $textLight !important;
-		&:hover {
-			@include customBackground2;
-		}
-	}
-}
-*/
-.register {
-	background-color: $background !important;
-}
-.message.is-primary .message-body {
-	border-color: $brandColor !important;
-	color: $brandColor !important;
-	background-color: $backgroundLight !important;
-}
-#const {
-	color: $textDark !important;
-}
-.button.is-link {
-	&:hover,
-	&:active {
-		background-color: $brandColor;
-	}
-}
-.dropMessage,
-.title {
-	color: $textDark;
-}
-.button {
-	border-color: $brandColor;
-	color: $brandColor;
-	&:hover {
-		background-color: $brandColor;
-		color: $background;
-	}
-}
-input:focus {
-	border-color: $brandColor !important;
-}
-/** imprint and terms **/
-.message {
-	word-break: break-all;
-	&-header {
-		background-color: $brandColor !important;
-	}
-	&-body {
-		background: linear-gradient(-45deg, $brandColorShift, $brandColor);
-	}
-}
