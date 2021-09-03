@@ -1,15 +1,19 @@
 <script context="module">
     export async function load({ fetch, page }) {
         let slug = page.params['category'];
-        const res = await fetch('/cat-'+slug+'.json');
-        let data = await res.json();
-        if (data.error) {
+        try {
+            const res = await fetch('/api/cat-' + slug + '.json');
+            if(res.status != 200) {
+                return undefined;
+            }
+            let data = await res.json();
+            return {
+                props: data,
+            };
+        } catch (e) {
             return undefined;
         }
 
-        return {
-            props: data,
-        };
     }
 </script>
 <script>
@@ -84,9 +88,9 @@
 
 {#each products as product, i  (product.id)}
 
-    <Saos animation={animation[i%5]}>
+    <Saos animation={animation[i%5]} once="true">
         <div class="tile is-ancestor" >
-            <CategoryTile cat={product}/>
+            <ProductTile cat={product}/>
         </div>
     </Saos>
 {/each}

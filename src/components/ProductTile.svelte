@@ -3,7 +3,7 @@
     let id = cat.id;
     let title = id;
     let shortdesc = '';
-    let exturl = 'cat-' + cat.slug;
+    let exturl = cat.slug;
     let image = '';
     let attributes = [];
     if (cat) {
@@ -26,7 +26,7 @@
 
 
     function get_random_color() {
-        let h = rand(180, 191);
+        let h = rand(200, 250);
         if (h > 180 && h < 190) {
             h += 20;
         }
@@ -43,44 +43,44 @@
     import { goto } from '$app/navigation';
 </script>
 <div class="tile is-parent">
-    <article class="tile is-child is-clickable box" style="background:{background}" on:click={()=>goto(exturl)}>
+    <article class="tile is-child is-clickable box" style="dbackground:{background}" on:click={()=>goto(exturl)}>
         {#if image}
             <figure class="title image is-4by3">
                 <img alt="{title}" src="{image}">
             </figure>
         {:else}
-            <p class="title" style="color:#fff;">{title}</p>
+            <p class="title">{title}</p>
         {/if}
-        <p class="subtitle" style="color:#fff;">{shortdesc}</p>
+        <p class="subtitle">{shortdesc}</p>
         <div class="">
             {#each attributes as attr}
                 <div class="icon-text">
                     <span class="icon has-text-success">
-                        <IconCheckSquare />
+                        <IconCheckSquare/>
                     </span>
-                    <span style="color:#fff">{attr}</span>
+                    <span>{attr}</span>
                 </div>
             {/each}
         </div>
         <div>
-            <div class="button is-danger" >
-                <span class="icon">
-                    <IconSkullCrossbones />
-                </span>
-                <span>Ignorieren</span>
-            </div>
-            <div class="button is-primary" on:click={()=>goto(exturl)}>
+            <a class="button" >
                 <span class="icon">
                     <IconInfo />
                 </span>
-                <span>Baustein Auswählen</span>
-            </div>
-            <div class="button is-success" >
+                <span>Zum Hersteller</span>
+            </a>
+            <a class="button is-primary" >
+                <span class="icon">
+                    <IconQuestion />
+                </span>
+                <span>Dienstleister finden</span>
+            </a>
+            <a class="button is-success" >
                 <span class="icon">
                     <IconCheckSquare />
                 </span>
-                <span>Als bereits erledigt makieren</span>
-            </div>
+                <span>Bereits im Einsatz</span>
+            </a>
         </div>
     </article>
 </div>

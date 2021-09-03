@@ -1,7 +1,5 @@
 <script>
-	import Fa from 'svelte-fa/src/fa.svelte';
-
-	import { faInfo, faLock, faHome, faExclamationCircle, faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
+	//import { faInfo, faLock, faHome, faExclamationCircle, faSkullCrossbones } from '@fortawesome/free-solid-svg-icons';
 	import stringResources from '../stringResources';
 
 	let opened = false;
@@ -21,7 +19,7 @@
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
 			<span class="icon">
-				<Fa icon={faLock} />
+				<IconLock />
 			</span><span>my-security-check.com</span>
 		</a>
 		<div id="burger" class="navbar-burger" data-target="navbar"  on:click={handleClick}>
@@ -34,12 +32,12 @@
 	<div class="navbar-menu" id="navbar">
 		<div class="navbar-start">
 			<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link" href="{category.slug}">
+				<a class="navbar-link" href="cat-{category.slug}">
 					{category.title}
 				</a>
 				<div class="navbar-dropdown is-boxed">
 					{#each categories as cat, i}
-						<a class="navbar-item" href="{cat.slug}">
+						<a class="navbar-item" href="cat-{cat.slug}">
 							{cat.title}
 						</a>
 					{/each}
@@ -47,7 +45,7 @@
 			</div>
 			<a href="/impressum" class="navbar-item">
 				<span class="icon">
-					<Fa icon={faInfo} />
+					<IconInfo />
 				</span>
 				<span>
 					{stringResources.menu.secondBtnText}
@@ -55,10 +53,18 @@
 			</a>
 			<a href="/datenschutz" class="navbar-item">
 				<span class="icon">
-					<Fa icon={faLock} />
+					<IconLock />
 				</span>
 				<span>
 					{stringResources.menu.thirdBtnText}
+				</span>
+			</a>
+			<a href="/team" class="navbar-item">
+				<span class="icon">
+					<IconBuilding />
+				</span>
+				<span>
+					Über uns
 				</span>
 			</a>
 		</div>
@@ -67,9 +73,9 @@
 			<div class="navbar-item">
 				<div class="field is-grouped">
 					<p class="control">
-						<a class="button is-primary" href="/securityincident">
+						<a class="button is-primary" href="/cat-securityincident">
 							<span class="icon">
-								<Fa icon={faSkullCrossbones} />
+								<IconSkullCrossbones />
 							</span>
 							<span>{stringResources.menu.underAttack}</span>
 						</a>

@@ -171,11 +171,7 @@ export async function get({ params }) {
     'where page.slug like ?').get([slug]);
 
     if (!category) {
-        return {
-            body: {
-                error: `${slug} not found`
-            }
-        }
+        return undefined;
     }
 
     const categories = await DB.prepare('SELECT page.*, cat.* FROM category cat\n' +

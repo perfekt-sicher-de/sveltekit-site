@@ -18,6 +18,7 @@
 		{stringResources.indexPage.urlMissingMsg}
 	</div>
 {/if}
+
 <section class="hero is-primary is-halfheight">
 	<div class="hero-title m-4">
 		<h1 class="title">{stringResources.appName}</h1>
