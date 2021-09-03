@@ -41,9 +41,37 @@
     let background = get_random_color();
 
     import { goto } from '$app/navigation';
+    import { createEventDispatcher } from 'svelte';
+    let shown = true;
+    let isDone = false;
+    let dispatch = createEventDispatcher();
+    export function show() {
+        shown = !shown;
+        isDone = false;
+        dispatch('show', shown);
+    }
+    export function done() {
+        isDone = true;
+        shown = false;
+        dispatch('show', shown);
+    }
 </script>
+
+<svelte:options accessors={true}/>
 <div class="tile is-parent">
-    <article class="tile is-child is-clickable box" style="dbackground:{background}" on:click={()=>goto(exturl)}>
+    {#if !shown}
+        <div on:click={show} class="button is-success" >
+                <span class="icon">
+                {#if isDone}
+                    <IconCheckSquare />
+                {:else}
+                    <IconLock />
+                {/if}
+                </span>
+            <span>{title} wieder anzeigen</span>
+        </div>
+    {:else}
+    <article class="tile is-child box" style="dbackground:{background}" >
         {#if image}
             <figure class="title image is-4by3">
                 <img alt="{title}" src="{image}">
@@ -63,24 +91,32 @@
             {/each}
         </div>
         <div>
-            <a class="button" >
+            <div class="button is-danger" on:click={show} >
+                <span class="icon">
+                    <IconSkullCrossbones />
+                </span>
+                <span>Ausschließen</span>
+            </div>
+            <div class="button" on:click={()=>goto(exturl)}>
                 <span class="icon">
                     <IconInfo />
                 </span>
                 <span>Zum Hersteller</span>
-            </a>
-            <a class="button is-primary" >
+            </div>
+            <!--
+            <div class="button is-primary" >
                 <span class="icon">
                     <IconQuestion />
                 </span>
                 <span>Dienstleister finden</span>
-            </a>
-            <a class="button is-success" >
+            </div>-->
+            <div class="button is-success" on:click={done}>
                 <span class="icon">
                     <IconCheckSquare />
                 </span>
                 <span>Bereits im Einsatz</span>
-            </a>
+            </div>
         </div>
     </article>
+    {/if}
 </div>

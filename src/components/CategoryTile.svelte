@@ -1,4 +1,6 @@
 <script>
+    import IconCheckSquare from "./IconCheckSquare.svelte";
+
     export let cat;
     let id = cat.id;
     let title = id;
@@ -41,8 +43,37 @@
     let background = get_random_color();
 
     import { goto } from '$app/navigation';
+    import { createEventDispatcher } from 'svelte';
+    let shown = true;
+    let isDone = false;
+    let dispatch = createEventDispatcher();
+    export function show() {
+        shown = !shown;
+        isDone = false;
+        dispatch('show', shown);
+    }
+    export function done() {
+        isDone = true;
+        shown = false;
+        dispatch('show', shown);
+    }
 </script>
+
+<svelte:options accessors={true}/>
+
 <div class="tile is-parent">
+    {#if !shown}
+        <div on:click={show} class="button is-success" >
+                <span class="icon">
+                {#if isDone}
+                    <IconCheckSquare />
+                {:else}
+                    <IconLock />
+                {/if}
+                </span>
+            <span>{title} wieder anzeigen</span>
+        </div>
+    {:else}
     <article class="tile is-child is-clickable box" style="background:{background}" on:click={()=>goto(exturl)}>
         {#if image}
             <figure class="title image is-4by3">
@@ -63,7 +94,7 @@
             {/each}
         </div>
         <div>
-            <div class="button is-danger" >
+            <div class="button is-danger" on:click={show} >
                 <span class="icon">
                     <IconSkullCrossbones />
                 </span>
@@ -75,7 +106,7 @@
                 </span>
                 <span>Baustein Auswählen</span>
             </div>
-            <div class="button is-success" >
+            <div class="button is-success" on:click={done} >
                 <span class="icon">
                     <IconCheckSquare />
                 </span>
@@ -83,4 +114,5 @@
             </div>
         </div>
     </article>
+    {/if}
 </div>
