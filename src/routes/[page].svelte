@@ -5,13 +5,10 @@
             return undefined;
         }
         const res = await fetch('/page-' + slug + '.json');
-        let data = await res.json();
-        if (data.error) {
-            return {
-                status: 404,
-                error: new Error(data.error),
-            };
+        if(res.status != 200) {
+            return undefined;
         }
+        let data = await res.json();
 
         return {
             props: data,
@@ -22,8 +19,6 @@
     export let page;
     import { fade } from 'svelte/transition';
     import stringResources from '../stringResources';
-    import Fa from 'svelte-fa/src/fa.svelte';
-    import { faLock } from '@fortawesome/free-solid-svg-icons';
     import SvelteMarkdown from 'svelte-markdown';
 
     const options = {
@@ -40,7 +35,7 @@
         <article class="message">
             <div class="message-header">
 				<span class="icon">
-					<Fa icon={faLock} />
+                    <svelte:component this={page.icon}/>
 				</span> {page.title}
             </div>
             <div class="message-body content has-text-left">

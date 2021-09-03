@@ -8,7 +8,7 @@
 
 <script context="module">
     export async function load({ fetch, page }) {
-        const res = await fetch('/cat-$.json');
+        const res = await fetch('/api/menu-check.json');
         let data = await res.json();
 
         if (data) {

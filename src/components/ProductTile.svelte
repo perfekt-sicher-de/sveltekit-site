@@ -1,11 +1,9 @@
 <script>
-    import IconCheckSquare from "./IconCheckSquare.svelte";
-
     export let cat;
     let id = cat.id;
     let title = id;
     let shortdesc = '';
-    let exturl = 'cat-' + cat.slug;
+    let exturl = cat.slug;
     let image = '';
     let attributes = [];
     if (cat) {
@@ -28,7 +26,7 @@
 
 
     function get_random_color() {
-        let h = rand(180, 191);
+        let h = rand(200, 250);
         if (h > 180 && h < 190) {
             h += 20;
         }
@@ -60,7 +58,6 @@
 </script>
 
 <svelte:options accessors={true}/>
-
 <div class="tile is-parent">
     {#if !shown}
         <div on:click={show} class="button is-success" >
@@ -74,22 +71,22 @@
             <span>{title} wieder anzeigen</span>
         </div>
     {:else}
-    <article class="tile is-child is-clickable box" style="background:{background}" on:click={()=>goto(exturl)}>
+    <article class="tile is-child box" style="dbackground:{background}" >
         {#if image}
             <figure class="title image is-4by3">
                 <img alt="{title}" src="{image}">
             </figure>
         {:else}
-            <p class="title" style="color:#fff;">{title}</p>
+            <p class="title">{title}</p>
         {/if}
-        <p class="subtitle" style="color:#fff;">{shortdesc}</p>
+        <p class="subtitle">{shortdesc}</p>
         <div class="">
             {#each attributes as attr}
                 <div class="icon-text">
                     <span class="icon has-text-success">
-                        <IconCheckSquare />
+                        <IconCheckSquare/>
                     </span>
-                    <span style="color:#fff">{attr}</span>
+                    <span>{attr}</span>
                 </div>
             {/each}
         </div>
@@ -98,19 +95,26 @@
                 <span class="icon">
                     <IconSkullCrossbones />
                 </span>
-                <span>Ignorieren</span>
+                <span>Ausschließen</span>
             </div>
-            <div class="button is-primary" on:click={()=>goto(exturl)}>
+            <div class="button" on:click={()=>goto(exturl)}>
                 <span class="icon">
                     <IconInfo />
                 </span>
-                <span>Baustein Auswählen</span>
+                <span>Zum Hersteller</span>
             </div>
-            <div class="button is-success" on:click={done} >
+            <!--
+            <div class="button is-primary" >
+                <span class="icon">
+                    <IconQuestion />
+                </span>
+                <span>Dienstleister finden</span>
+            </div>-->
+            <div class="button is-success" on:click={done}>
                 <span class="icon">
                     <IconCheckSquare />
                 </span>
-                <span>Als bereits erledigt makieren</span>
+                <span>Bereits im Einsatz</span>
             </div>
         </div>
     </article>
