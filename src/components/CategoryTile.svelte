@@ -44,6 +44,7 @@
 
     import { goto } from '$app/navigation';
     import { createEventDispatcher } from 'svelte';
+    import IconSkullCrossbones from "./IconSkullCrossbones.svelte";
     let shown = true;
     let isDone = false;
     let dispatch = createEventDispatcher();
@@ -63,18 +64,23 @@
 
 <div class="tile is-parent">
     {#if !shown}
-        <div on:click={show} class="button is-success" >
+        {#if isDone}
+           <div on:click={show} class="button is-success" >
                 <span class="icon">
-                {#if isDone}
                     <IconCheckSquare />
-                {:else}
-                    <IconLock />
-                {/if}
                 </span>
-            <span>{title} wieder anzeigen</span>
-        </div>
+                <span>{title} wieder anzeigen</span>
+            </div>
+        {:else}
+            <div on:click={show} class="button is-warning" >
+                <span class="icon">
+                    <IconSkullCrossbones />
+                </span>
+                <span>{title} wieder anzeigen</span>
+            </div>
+        {/if}
     {:else}
-    <article class="tile is-child is-clickable box" style="background:{background}" on:click={()=>goto(exturl)}>
+    <article class="tile is-child is-clickable box" style="background:{background}">
         {#if image}
             <figure class="title image is-4by3">
                 <img alt="{title}" src="{image}">

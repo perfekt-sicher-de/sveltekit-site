@@ -1,6 +1,7 @@
 "use strict";
 
 import sqlite from 'better-sqlite3';
+import * as marked from 'marked';
 
 export async function get({ params }) {
 
@@ -18,6 +19,8 @@ export async function get({ params }) {
             return undefined;
         }
 
+        const html = marked(page.main);
+        page.html = html;
         return {
             body: {
                 page

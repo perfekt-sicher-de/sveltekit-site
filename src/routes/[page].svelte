@@ -19,7 +19,6 @@
     export let page;
     import { fade } from 'svelte/transition';
     import stringResources from '../stringResources';
-    import SvelteMarkdown from 'svelte-markdown';
 
     const options = {
         mangle: false
@@ -39,7 +38,7 @@
 				</span> {page.title}
             </div>
             <div class="message-body content has-text-left">
-                <SvelteMarkdown source={page.main} {options} />
+                {@html page.html}
             </div>
         </article>
     </div>
