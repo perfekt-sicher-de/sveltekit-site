@@ -1,7 +1,7 @@
 "use strict";
 
 import sqlite from 'better-sqlite3';
-import * as marked from 'marked';
+import marked from "marked";
 
 export async function get({ params }) {
 
@@ -12,26 +12,26 @@ export async function get({ params }) {
         const join_page = ' JOIN landing_pages_components pageco ON pageco.landing_page_id = landing_pages.id\n' +
             '    join components_pages_pages page ON pageco.component_id = page.id\n';
 
-        const page = await DB.prepare('SELECT page.*, landing_pages.* FROM landing_pages\n' +
+        const page = await DB.prepare('SELECT landing_pages.title, landing_pages.main FROM landing_pages\n' +
             join_page +
             'where page.slug like ?').get([slug]);
         if (!page) {
             return undefined;
         }
 
-        const html = marked(page.main);
-        page.html = html;
+        const options = {
+            mangle: false
+        };
+        const html = marked(page.main, options);
+        page.main = html;
         return {
             body: {
                 page
             }
         };
     } catch (e) {
-        return {
-            body: {
-                error: "page " + slug + " got error" + e
-            }
-        }
+        console.log(e);
+        throw e;
     }
 
 

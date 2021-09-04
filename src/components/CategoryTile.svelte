@@ -80,7 +80,7 @@
             </div>
         {/if}
     {:else}
-    <article class="tile is-child is-clickable box" style="background:{background}">
+    <article class="tile is-child box" style="background:{background}">
         {#if image}
             <figure class="title image is-4by3">
                 <img alt="{title}" src="{image}">
@@ -106,12 +106,12 @@
                 </span>
                 <span>Ignorieren</span>
             </div>
-            <div class="button is-primary" on:click={()=>goto(exturl)}>
+            <a class="button is-primary" href="{exturl}" on:click={()=>goto(exturl)}>
                 <span class="icon">
                     <IconInfo />
                 </span>
                 <span>Baustein Auswählen</span>
-            </div>
+            </a>
             <div class="button is-success" on:click={done} >
                 <span class="icon">
                     <IconCheckSquare />
