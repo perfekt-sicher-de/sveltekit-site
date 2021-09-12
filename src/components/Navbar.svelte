@@ -20,7 +20,7 @@
 		<a class="navbar-item" href="/">
 			<span class="icon">
 				<IconLock />
-			</span><span>my-security-check.com</span>
+			</span><span>{stringResources.appName}</span>
 		</a>
 		<div id="burger" class="navbar-burger" data-target="navbar"  on:click={handleClick}>
 			<span></span>
