@@ -1,6 +1,6 @@
 "use strict";
 const stringResources = {
-    appName: "my-security-check.com",
+    appName: "perfekt-sicher.de",
     menu: {
         firtsBtnText: "Home",
         secondBtnText: "Impressum",
