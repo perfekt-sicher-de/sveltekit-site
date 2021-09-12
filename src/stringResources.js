@@ -9,7 +9,7 @@ const stringResources = {
     },
     indexPage: {
         title: "",
-        aboutText: "„Meine Mission: IT Sicherheit. \nMeine Motivation: Besser sein als die Kriminellen um unsere digitale Zukunft sicherzustellen.“",
+        aboutText: "Die umfangreichsten Tests, der beste Schutz",
         scanInputPlaceHolder: "www.your-site.de",
         scanStartBtnText: "Scan starten",
         scanHeadline: "Hier können Sie Ihre Domains kostenlos und gefahrlos überprüfen",
