@@ -18,9 +18,10 @@
 <nav class="navbar">
 	<div class="navbar-brand">
 		<a class="navbar-item" href="/">
-			<span class="icon">
-				<IconLock />
-			</span><span>{stringResources.appName}</span>
+			<span>
+				<img alt="{stringResources.appName}" src="/logos/logo64.png" width="32" height="32">
+			</span>
+			<span style="font-family:'FreeSerif'; font-weight: bolder;">&nbsp; PERFEKT-SICHER.DE</span>
 		</a>
 		<div id="burger" class="navbar-burger" data-target="navbar"  on:click={handleClick}>
 			<span></span>
