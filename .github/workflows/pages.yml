@@ -1,0 +1,26 @@
+name: Publish pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install npm@latest -g
+      - run: npm -v
+      - run: npm install
+      - run: npm run build
+      - name: Publish
+        uses: selenehyun/gh-push@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PUBLISH_ACCESS_TOKEN }}
+          COMMIT_FILES: dist/*
+          REPO_FULLNAME: perfekt-sicher-de/dist
+          BRANCH: main
