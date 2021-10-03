@@ -33,9 +33,10 @@
             <p class="title">
                 Über Keywan Ghadami
             </p>
-            <p class="subtitle">
-                <h2>Wer steckt hinter perfekt-sicher.de? Und warum?</h2>
+            <div class="subtitle">
+<h2>Wer steckt hinter perfekt-sicher.de? Und warum?</h2>
                 <br>
+                
                 Schon währendem Studium hab ich damit begonnen Programme und Websiten zu erstellen.
                 Mittlerweile berate Ich Agenturen und Firmen zu diversen E-Commerce und Sicherheits-Themen.
                 Während alle E-Commerce/Sicherheits Themen über OXID eSalses abgedeckt werden können
@@ -45,7 +46,7 @@
                 <br>
 
                 Mein Team:
-            </p>
+            </div>
         </div>
     </div>
 </section>
