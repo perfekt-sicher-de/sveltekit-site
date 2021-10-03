@@ -21,7 +21,7 @@
 			<span>
 				<img alt="{stringResources.appName}" src="/logos/logo64.png" width="32" height="32">
 			</span>
-			<span style="font-family:'FreeSerif'; font-weight: bolder;">&nbsp; PERFEKT-SICHER.DE</span>
+			<span>&nbsp; perfekt-sicher.de</span>
 		</a>
 		<div id="burger" class="navbar-burger" data-target="navbar"  on:click={handleClick}>
 			<span></span>
@@ -32,42 +32,20 @@
 
 	<div class="navbar-menu" id="navbar">
 		<div class="navbar-start">
+			{#each categories as cat, i}
 			<div class="navbar-item has-dropdown is-hoverable">
-				<a class="navbar-link" href="cat-{category.slug}">
-					{category.title}
+				<a class="navbar-link" href="cat-{cat.slug}">
+					{cat.title}
 				</a>
 				<div class="navbar-dropdown is-boxed">
-					{#each categories as cat, i}
-						<a class="navbar-item" href="cat-{cat.slug}">
-							{cat.title}
-						</a>
+					{#each cat.categories as subcat, i}
+					<a class="navbar-item" href="cat-{subcat.slug}">
+							{subcat.title}
+					</a>
 					{/each}
 				</div>
 			</div>
-			<a href="/impressum" class="navbar-item">
-				<span class="icon">
-					<IconInfo />
-				</span>
-				<span>
-					{stringResources.menu.secondBtnText}
-				</span>
-			</a>
-			<a href="/datenschutz" class="navbar-item">
-				<span class="icon">
-					<IconLock />
-				</span>
-				<span>
-					{stringResources.menu.thirdBtnText}
-				</span>
-			</a>
-			<a href="/team" class="navbar-item">
-				<span class="icon">
-					<IconBuilding />
-				</span>
-				<span>
-					Über uns
-				</span>
-			</a>
+			{/each}
 		</div>
 
 		<div class="navbar-end">

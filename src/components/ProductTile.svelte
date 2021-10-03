@@ -71,7 +71,7 @@
             <span>{title} wieder anzeigen</span>
         </div>
     {:else}
-    <article class="tile is-child box" style="dbackground:{background}" >
+    <article class="tile is-child box is-clickable" style="dbackground:{background}" on:click={()=>goto(exturl)}>
         {#if image}
             <figure class="title image is-4by3">
                 <img alt="{title}" src="{image}">
@@ -91,6 +91,7 @@
             {/each}
         </div>
         <div>
+            <!--
             <div class="button is-danger" on:click={show} >
                 <span class="icon">
                     <IconSkullCrossbones />
@@ -103,19 +104,19 @@
                 </span>
                 <span>Zum Hersteller</span>
             </div>
-            <!--
+
             <div class="button is-primary" >
                 <span class="icon">
                     <IconQuestion />
                 </span>
                 <span>Dienstleister finden</span>
-            </div>-->
+            </div>
             <div class="button is-success" on:click={done}>
                 <span class="icon">
                     <IconCheckSquare />
                 </span>
                 <span>Bereits im Einsatz</span>
-            </div>
+            </div>-->
         </div>
     </article>
     {/if}

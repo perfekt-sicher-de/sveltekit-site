@@ -16,10 +16,16 @@ export async function get({ params }) {
         return undefined;
     }
 
-    const categories = await DB.prepare('SELECT page.slug, cat.id, cat.title FROM category cat\n' +
+    let sqlcats = 'SELECT page.slug, cat.id, cat.title FROM category cat\n' +
         '    JOIN category__parents catp ON catp.category_id = cat.id\n' +
         join_page +
-        ' where catp.related_category_id = ?').all([category.id]);
+        ' where catp.related_category_id = ?';
+    const categories = await DB.prepare(sqlcats).all([category.id]);
+
+    for (const cat of categories) {
+        const sub_categories = await DB.prepare(sqlcats).all([cat.id]);
+        cat.categories = sub_categories;
+    }
 
     return {
         body: {

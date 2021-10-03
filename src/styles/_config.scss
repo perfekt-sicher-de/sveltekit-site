@@ -1,17 +1,20 @@
 
-//$primary: hsl(187, 95%, 40%);
-$primary: rgb(27, 87, 136);
+$primary: hsl(187, 95%, 40%);
+//$primary: rgb(27, 87, 136);
 $link: $primary;
 $link-visited: $primary;
 
 
-$text: darken($primary,10);
-$text-strong: darken($text,10);
+$text: $primary,10;
+$text-strong: $text,10;
 
 /*
 $text-light: $grey;
 */
 
-
+$white-ter: #000000;
 /** bulma variable */
-$navbar-background-color: #f1f1f1;
+$background: #fff;
+$navbar-background-color: #fff;
+$body-background-color: #fff;
+

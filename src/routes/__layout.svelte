@@ -25,8 +25,44 @@
 
 
 
-<Navbar category={category} categories={categories}/>
 <div class="container">
+    <Navbar category={category} categories={categories}/>
     <section class="m-4"></section>
     <slot />
+    <footer>
+
+        <nav class="navbar">
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/impressum" class="navbar-item">
+                        <span class="icon">
+                            <IconInfo />
+                        </span>
+                        <span>
+                            {stringResources.menu.secondBtnText}
+                        </span>
+                    </a>
+                    <a href="/datenschutz" class="navbar-item">
+                        <span class="icon">
+                            <IconLock />
+                        </span>
+                        <span>
+                            {stringResources.menu.thirdBtnText}
+                        </span>
+                    </a>
+                    <a href="/team" class="navbar-item">
+                        <span class="icon">
+                            <IconBuilding />
+                        </span>
+                        <span>
+                            Über uns
+                        </span>
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                </div>
+            </div>
+        </nav>
+    </footer>
 </div>
