@@ -18,13 +18,10 @@
     <div class="hero-body">
         <div>
             <p class="title">
-                Über my-security-check.com
+                Über perfekt-sicher.de
             </p>
             <p class="subtitle">
-                my-security-check.com soll Unternehmen helfen die richtigen und allumfassenden Sicherheitslösungen zu finden,
-                und das so gut, so einfach, so komfortabel, sicher und so umweltschonend wie möglich.<br>
-                Gleichtzeit soll es kostenfrei sein und bleiben und leicht zu pflegen sein.<br>
-                Erfüllen wie diese Anforderung nicht, dann schreiben Sie uns nichts hilft uns mehr zu wachsen als Kritik.
+                perfekt-sicher.de hilft Unternehmen die richtigen Sicherheitslösungen zu finden.<br>
             </p>
         </div>
     </div>
@@ -37,13 +34,16 @@
                 Über Keywan Ghadami
             </p>
             <p class="subtitle">
-                Wer steckt hinter my-security-check.com? Und warum?<br>
-                Software-Entwickler ist mehr als nur mein Beruf, ich habe schon vor dem Studium damit begonnen
-                kleine Programme und Websiten zu erstellen. Viele Kollegen, Arbeitgeber und Kunden
-                schätzen meine Arbeit als Entwickler und technical Lead.<br>
-                Für mich persönlich reicht es nicht mehr, nur das zu tun was gerade bezahlt werden kann.
-                Ich möchte als Entwicklen die zukunft gestalten, die Art wie Websiten erstellt werden und das machen was
-                ausergewöhnlich ist.<br>
+                <h2>Wer steckt hinter perfekt-sicher.de? Und warum?</h2>
+                <br>
+                Schon währendem Studium hab ich damit begonnen Programme und Websiten zu erstellen.
+                Mittlerweile berate Ich Agenturen und Firmen zu diversen E-Commerce und Sicherheits-Themen.
+                Während alle E-Commerce/Sicherheits Themen über OXID eSalses abgedeckt werden können
+                gibt es Webanwendungen, APIs und andere Sicherheits-Themen bei denen ich außerhalb meiner
+                hauptberüflichen Tätigkeit unterstütze.
+
+                <br>
+
                 Mein Team:
             </p>
         </div>
