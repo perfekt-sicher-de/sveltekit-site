@@ -41,7 +41,7 @@
                 Mittlerweile berate Ich Agenturen und Firmen zu diversen E-Commerce und Sicherheits-Themen.
                 Während alle E-Commerce/Sicherheits Themen über OXID eSalses abgedeckt werden können
                 gibt es Webanwendungen, APIs und andere Sicherheits-Themen bei denen ich außerhalb meiner
-                hauptberüflichen Tätigkeit unterstütze.
+                hauptberuflichen Tätigkeit unterstütze.
 
                 <br>
 
