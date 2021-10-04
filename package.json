@@ -28,7 +28,6 @@
     "prettier-plugin-svelte": "^2.2.0",
     "saos": "^1.2.0",
     "sass": "^1.38.2",
-    "sqlite3": "^5.0.2",
     "svelma": "^0.4.5",
     "svelte": "^3.42.3",
     "svelte-fa": "^2.2.1",
