@@ -1,7 +1,7 @@
 <script>
 	import '../styles/app.scss';
 	import stringResources from '../stringResources';
-	import Navbar from '../components/Navbar.svelte';
+	import Header from '../components/Header.svelte';
     export let categories;
     export let category;
 </script>
@@ -23,46 +23,38 @@
     }
 </script>
 
-
-
 <div class="container">
-    <Navbar category={category} categories={categories}/>
+    <Header category={category} categories={categories}/>
     <section class="m-4"></section>
     <slot />
     <footer>
-
-        <nav class="navbar">
-            <div class="navbar-menu">
-                <div class="navbar-start">
-                    <a href="/impressum" class="navbar-item">
+        <Navbar>
+            <div slot="navbar-start" class="navbar-start">
+                <a href="/impressum" class="navbar-item">
                         <span class="icon">
                             <IconInfo />
                         </span>
-                        <span>
+                    <span>
                             {stringResources.menu.secondBtnText}
                         </span>
-                    </a>
-                    <a href="/datenschutz" class="navbar-item">
+                </a>
+                <a href="/datenschutz" class="navbar-item">
                         <span class="icon">
                             <IconLock />
                         </span>
-                        <span>
+                    <span>
                             {stringResources.menu.thirdBtnText}
                         </span>
-                    </a>
-                    <a href="/team" class="navbar-item">
+                </a>
+                <a href="/team" class="navbar-item">
                         <span class="icon">
                             <IconBuilding />
                         </span>
-                        <span>
+                    <span>
                             Über uns
-                        </span>
-                    </a>
-                </div>
-
-                <div class="navbar-end">
-                </div>
+                    </span>
+                </a>
             </div>
-        </nav>
+        </Navbar>
     </footer>
 </div>
