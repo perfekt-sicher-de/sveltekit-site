@@ -5,7 +5,7 @@
     export { className as class };
     export let isOpen = false;
 </script>
-<Dropdown nav inNavBar>
+<Dropdown bind:isOpen={isOpen} nav inNavBar>
     <DropdownToggle nav caret class="{className}">{text}</DropdownToggle>
     <DropdownMenu>
         <slot></slot>

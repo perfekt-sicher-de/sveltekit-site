@@ -12,7 +12,7 @@
 	import NavMenuItem from "./NavMenuItem.svelte";
 	import IconUser from "./Icons/IconUser.svelte";
 	import IconSearch from "./Icons/IconSearch.svelte";
-	export let category;
+	//export let category;
 	export let categories;
 	let isOpen = false;
 	function handleUpdate(event) {
