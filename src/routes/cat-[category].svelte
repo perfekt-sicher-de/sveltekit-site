@@ -1,5 +1,5 @@
 <script context="module">
-    export async function load({ fetch, url, parmas }) {
+    export async function load({ fetch, url, params }) {
         let slug = params['category'];
         try {
             const res = await fetch('/api/cat-' + slug + '.json');

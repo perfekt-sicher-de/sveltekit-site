@@ -1,5 +1,5 @@
 <script context="module">
-    export async function load({ fetch, url, parmas }) {
+    export async function load({ fetch, url, params }) {
         let slug = params['page'];
         if (slug.indexOf('.') > 0){
             return undefined;
