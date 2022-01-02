@@ -1,6 +1,6 @@
 <script context="module">
-    export async function load({ fetch, page }) {
-        let slug = page.params['category'];
+    export async function load({ fetch, url, parmas }) {
+        let slug = params['category'];
         try {
             const res = await fetch('/api/cat-' + slug + '.json');
             if(res.status != 200) {

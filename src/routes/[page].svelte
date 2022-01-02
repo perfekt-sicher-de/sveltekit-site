@@ -1,6 +1,6 @@
 <script context="module">
-    export async function load({ fetch, page }) {
-        let slug = page.params['page'];
+    export async function load({ fetch, url, parmas }) {
+        let slug = params['page'];
         if (slug.indexOf('.') > 0){
             return undefined;
         }

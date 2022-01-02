@@ -6,7 +6,7 @@
     export let category;
 </script>
 <script context="module">
-    export async function load({ fetch, page }) {
+    export async function load({ fetch, url, parmas }) {
         const res = await fetch('/api/menu-check.json');
         let data = await res.json();
 
