@@ -62,36 +62,31 @@
         }
     }
 </style>
-
-<section class="hero is-primary is-halfheight">
-    <div class="hero-body">
-        <div>
-            <p class="title">
-                {category.title}
-            </p>
-            <p class="subtitle">
-                {category.shortdesc}
-            </p>
+<div class="m-4 p-4">
+    <section class="hero is-primary is-halfheight">
+        <div class="hero-body">
+            <div>
+                <p class="title">
+                    {category.title}
+                </p>
+                <p class="subtitle">
+                    {category.shortdesc}
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    {#each categories as subCategory, i  (subCategory.id)}
 
-<div class="m-4"></div>
-{#each categories as subCategory, i  (subCategory.id)}
+            <div class="tile">
+                <CategoryTile cat={subCategory} />
+            </div>
+    {/each}
 
-    <Saos animation={animation[i%5]} once=true>
-        <div class="tile is-ancestor">
-            <CategoryTile cat={subCategory} />
-        </div>
-    </Saos>
-{/each}
+    {#each products as product, i  (product.id)}
 
-{#each products as product, i  (product.id)}
+            <div class="tile" >
+                <ProductTile cat={product}/>
+            </div>
+    {/each}
 
-    <Saos animation={animation[i%5]} once="true">
-        <div class="tile is-ancestor" >
-            <ProductTile cat={product}/>
-        </div>
-    </Saos>
-{/each}
-
+</div>

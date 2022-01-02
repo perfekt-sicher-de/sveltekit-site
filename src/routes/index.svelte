@@ -19,20 +19,12 @@
 	</div>
 {/if}
 
-<section class="hero is-primary is-halfheight">
-	<div class="hero-title m-4">
-		<h1 class="title">{stringResources.appName}</h1>
-	</div>
-	<div class="hero-body">
-		<div>
-			<p class="title">
+<section class="img-container">
+	<div class="kenburns" style="background-image: url(stock-photo-two-business-people-standing-in-server-room-with-laptop-and-discussing-1126202276.jpg)">
+<!--		<h1 class="title">{stringResources.appName}</h1>
 				{stringResources.indexPage.aboutText}
-			</p>
-			<p class="subtitle">
 				Keywan Ghadami
-			</p>
-		</div>
-	</div>
+-->
 </section>
 <!--
 <section class="hero is-secondary">

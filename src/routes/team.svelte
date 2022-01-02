@@ -14,18 +14,14 @@
     export let users;
 </script>
 
-<section class="hero is-primary is-halfheight">
-    <div class="hero-body">
-        <div>
-            <p class="title">
-                Über perfekt-sicher.de
-            </p>
-            <p class="subtitle">
-                perfekt-sicher.de hilft Unternehmen die richtigen Sicherheitslösungen zu finden.<br>
-            </p>
-        </div>
-    </div>
-</section>
+<Hero>
+    <h1>
+        Über perfekt-sicher.de
+    </h1>
+    <p class="subtitle">
+        perfekt-sicher.de hilft Unternehmen die richtigen Sicherheitslösungen zu finden.<br>
+    </p>
+</Hero>
 
 <section class="hero is-secondary is-halfheight">
     <div class="hero-body">

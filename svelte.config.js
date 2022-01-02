@@ -23,7 +23,11 @@ export default {
 		vite: {
 			plugins: [
 				autoImport({
-					components: ['./src/components']
+					components: [
+						'./src/components',
+						'./node_modules/sveltestrap/src'
+					],
+
 				})
 				//				minifyHtml() -> it does somehow not work
 			],

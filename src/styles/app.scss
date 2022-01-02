@@ -1,27 +1,163 @@
-@charset "utf-8";
-@import "../node_modules/bulma/sass/utilities/functions";
-@import 'config';
-@import "../node_modules/bulma/sass/utilities/_all";
-@import "../node_modules/bulma/sass/base/_all";
-@import "../node_modules/bulma/sass/elements/box";
-@import "../node_modules/bulma/sass/elements/button";
-@import "../node_modules/bulma/sass/elements/container";
-@import "../node_modules/bulma/sass/elements/content";
-@import "../node_modules/bulma/sass/elements/icon";
-@import "../node_modules/bulma/sass/elements/image";
-@import "../node_modules/bulma/sass/elements/notification";
-@import "../node_modules/bulma/sass/elements/progress";
-//@import "../node_modules/bulma/sass/elements/table";
-//@import "../node_modules/bulma/sass/elements/tag";
-@import "../node_modules/bulma/sass/elements/title";
-@import "../node_modules/bulma/sass/elements/other";
-//@import "../node_modules/bulma/sass/form/_all";
-@import "../node_modules/bulma/sass/components/menu";
-@import "../node_modules/bulma/sass/components/navbar";
-@import "../node_modules/bulma/sass/components/message";
-@import "../node_modules/bulma/sass/grid/_all";
-@import "../node_modules/bulma/sass/helpers/_all";
-@import "../node_modules/bulma/sass/layout/hero";
-@import "../node_modules/bulma/sass/layout/section";
+$primary: #38a9d8;
+$dark: #000;
+$font-family-sans-serif: Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  color: $primary;
+}
+
+$body-bg: #050515;
+$body-color: #aaa;
+
+// Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+
+$navbar-dark-color:                 $white;
+$navbar-dark-hover-color:           $primary;
+$navbar-dark-active-color:          $navbar-dark-hover-color;
+
+
+//reset
+@import "../node_modules/bootstrap/scss/reboot";
+
+// 4. Include any optional Bootstrap CSS as needed
+// Layout & components
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/close";
+@import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+@import "../node_modules/bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
+
+// Helpers
+@import "../node_modules/bootstrap/scss/helpers";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 6. Add additional custom code here
+
+
+.horizont {
+  background: $dark linear-gradient(-180deg, $dark 90%, $primary, #050515) repeat scroll 0% 0%;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  line-height: 64px;
+  font-family: Roboto;
+}
+
+.navbar-nav.wide {
+  display:table;
+  width:100%;
+  margin: 0;
+}
+.navbar-nav.wide > .nav-item {
+  float:none;
+  display:table-cell;
+  text-align:center;
+
+  &:not(:last-child){
+    border-right: solid 1px $primary;
+  }
+
+}
+
+.img-container{
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  position: fixed;
+  overflow: hidden;
+}
+
+.img-container div{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: block;
+  background-repeat: no-repeat;
+  animation: ken 120s ease-out infinite;
+}
+
+article {
+  margin-bottom: 2em;
+}
+
+.title {
+  @extend .h2;
+}
+
+
+
+@-webkit-keyframes ken {
+  0% {
+    transform-origin: bottom left;
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.6);
+  }
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../fonts/roboto-v29-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+  url('/fonts/roboto-v29-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('/fonts/roboto-v29-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 
 
