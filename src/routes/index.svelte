@@ -18,7 +18,6 @@
 		{stringResources.indexPage.urlMissingMsg}
 	</div>
 {/if}
-
 <section class="img-container">
 	<div class="kenburns" style="background-image: url(/cloud-storage-banner-background.jpg)">
 <!--		<h1 class="title">{stringResources.appName}</h1>

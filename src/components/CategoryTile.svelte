@@ -5,7 +5,7 @@
     let id = cat.id;
     let title = id;
     let shortdesc = '';
-    let exturl = 'cat-' + cat.slug;
+    let exturl = cat.slug;
     let image = '';
     let attributes = [];
     if (cat) {

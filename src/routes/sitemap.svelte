@@ -1,11 +1,3 @@
-<script>
-    import '../styles/app.scss';
-    import stringResources from '../stringResources';
-    import {Container} from "sveltestrap";
-    import MyHeader from "../components/MyHeader.svelte";
-    export let categories;
-    export let category;
-</script>
 <script context="module">
     export async function load({ fetch }) {
         const res = await fetch('/api/menu-check.json');
@@ -22,6 +14,18 @@
         };
     }
 </script>
+<script>
+    export let categories;
+</script>
 
-<MyHeader category={category} categories={categories}/>
-<slot />
+{#each categories as cat, i}
+    <h2>{cat.title}</h2>
+    <ul>
+        {#each cat.categories as subcat, i}
+            <li><a href="/{subcat.slug}" >{subcat.title}</a></li>
+        {/each}
+    </ul>
+{/each}
+
+<a href="/datenschutz">datenschutz</a>
+<a href="/impressum">impressum</a>

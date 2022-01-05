@@ -19,6 +19,7 @@
 		isOpen = event.detail.isOpen;
 	}
 </script>
+
 <header>
 	<Navbar class="horizont2" color="dark" dark expand="lg">
 		<NavbarToggler on:click={() => (isOpen = !isOpen)} class="p-0 border-0" id="navbarSideCollapse" aria-label="Toggle navigation"></NavbarToggler>
@@ -27,7 +28,7 @@
 				{#each categories as cat, i}
 					<SubNavMenu text="{cat.title}">
 						{#each cat.categories as subcat, i}
-							<li><DropdownItem href="/cat-{subcat.slug}" >{subcat.title}</DropdownItem></li>
+							<li><DropdownItem href="/{subcat.slug}" >{subcat.title}</DropdownItem></li>
 						{/each}
 					</SubNavMenu>
 				{/each}
@@ -48,7 +49,7 @@
 </header>
 <!--
 
-	<a class="button is-primary" href="/cat-securityincident">
+	<a class="button is-primary" href="/securityincident">
 							<span class="icon">
 								<IconSkullCrossbones />
 							</span>

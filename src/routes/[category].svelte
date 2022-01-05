@@ -2,7 +2,7 @@
     export async function load({ fetch, url, params }) {
         let slug = params['category'];
         try {
-            const res = await fetch('/api/cat-' + slug + '.json');
+            const res = await fetch('/api/category/' + slug + '.json');
             if(res.status != 200) {
                 return undefined;
             }
