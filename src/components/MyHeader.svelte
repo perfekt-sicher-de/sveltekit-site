@@ -27,7 +27,7 @@
 				{#each categories as cat, i}
 					<SubNavMenu text="{cat.title}">
 						{#each cat.categories as subcat, i}
-							<li><DropdownItem href="cat-{subcat.slug}" >{subcat.title}</DropdownItem></li>
+							<li><DropdownItem href="/cat-{subcat.slug}" >{subcat.title}</DropdownItem></li>
 						{/each}
 					</SubNavMenu>
 				{/each}
