@@ -3,9 +3,9 @@
 Is the website to support companies to secure there business.
 It's made for their needs.
 
-The vode that you see here is made with support form experts from all over the world.
+The code that you see here is made with support form experts from all over the world.
 
-It is open source to provide the maximum of transparency.
+Some parts of it are open source to provide the maximum of transparency but be aware that some content is copy right protected, especially pictures.
 Everyone can check the code, report issues, add suggestions and contribute.
 
 

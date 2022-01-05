@@ -20,7 +20,7 @@
 {/if}
 
 <section class="img-container">
-	<div class="kenburns" style="background-image: url(stock-photo-two-business-people-standing-in-server-room-with-laptop-and-discussing-1126202276.jpg)">
+	<div class="kenburns" style="background-image: url(/cloud-storage-banner-background.jpg)">
 <!--		<h1 class="title">{stringResources.appName}</h1>
 				{stringResources.indexPage.aboutText}
 				Keywan Ghadami
